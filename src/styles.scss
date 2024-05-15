@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './app/scss/mixins.scss';
+
+html {
+  background: var(--background-color, #000000);
+  color: var(--text-color, #F3F3F3);
+  
+  @include commons();
+}
+
+html.dark {
+  @include dark-mode();
+}
+
+html.light {
+  @include light-mode();
+}

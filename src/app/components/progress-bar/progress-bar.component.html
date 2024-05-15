@@ -1,0 +1,27 @@
+<section class="flex flex-col gap-4 p-4 w-full">
+  <label for="progress">Set the value of progress bar (0 to 100)</label>
+  <input [(ngModel)]="progress" type="number" id="progress" name="progress" class="text-black text-right">
+
+  <div class="grid grid-cols-3 gap-4 sm:flex sm:flex-row w-full">
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 10, type: 'Add' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 25, type: 'Add' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 50, type: 'Add' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -50, type: 'Decrease' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -25, type: 'Decrease' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -10, type: 'Decrease' }"></ng-container>
+  </div>
+
+  <div class="flex bg-[--negative-color] h-5 w-full">
+    <div class="bg-[--positive-color]" [style.width.%]="progress()"></div>
+  </div>
+</section>
+
+<ng-template #button let-value let-type="type">
+  <button 
+    type="button" 
+    class="flex-1 font-medium rounded-md p-1" 
+    [ngClass]="type == 'Add' ? 'bg-[--positive-color] hover:bg-[--positive-hover-color]' : 'bg-[--negative-color] hover:bg-[--negative-hover-color]'"
+    (click)="updateValue(value)">
+    {{type}} {{value}}
+  </button>
+</ng-template>

@@ -1,0 +1,12 @@
+@if (themesService.currentTheme() == Theme.DARK) {
+  <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: '/assets/svg/sun.svg' }"></ng-container>
+}
+@else if (themesService.currentTheme() == Theme.LIGHT) {
+  <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: '/assets/svg/moon.svg' }"></ng-container>
+}
+
+<ng-template #button let-imagePath>
+  <button type="button" class="hover:scale-105 hover:underline" (click)="toggleTheme()">
+    <img [src]="imagePath">
+  </button>
+</ng-template>
