@@ -1,26 +1,17 @@
 @mixin light-mode() {
   --background-color: #F3F3F3;
-  --background-button-color: #0369A1;
   --text-color: #000000;
   --text-secondary-color: #171717;
-  --border-color: #0369A1;
+  --border-color: #334155;
 }
 
 @mixin dark-mode() {
   --background-color: #000000;
-  --background-button-color: #0369A1;
   --text-color: #F3F3F3;
   --text-secondary-color: #A8A29E;
-  --border-color: #7DD3FC;
+  --border-color: #CBD5E1;
 }
 
 @mixin commons() {
-  --primary-color: #0EA5E9;
-  --positive-color: #16A34A;
-  --negative-color: #DC2626;
-  --disabled-color: #6B7280;
-
-  --hover-color: #1D4ED8;
-  --positive-hover-color: #22C55E;
-  --negative-hover-color: #EF4444;
+  --primary-color: #4338CA;
 }

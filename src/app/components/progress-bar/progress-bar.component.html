@@ -1,27 +1,26 @@
-<section class="flex flex-col gap-4 p-4 w-full">
-  <label for="progress">Set the value of progress bar (0 to 100)</label>
-  <input [(ngModel)]="progress" type="number" id="progress" name="progress" class="text-black text-right">
-
-  <div class="grid grid-cols-3 gap-4 sm:flex sm:flex-row w-full">
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 10, type: 'Add' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 25, type: 'Add' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 50, type: 'Add' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -50, type: 'Decrease' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -25, type: 'Decrease' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -10, type: 'Decrease' }"></ng-container>
+<section class="w-full flex flex-col gap-4 p-4">
+  <div class="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 10, type: '+10' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 25, type: '+25' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 50, type: '+50' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -50, type: '-50' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -25, type: '-25' }"></ng-container>
+    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -10, type: '-10' }"></ng-container>
   </div>
 
-  <div class="flex bg-[--negative-color] h-5 w-full">
-    <div class="bg-[--positive-color]" [style.width.%]="progress()"></div>
+  <span class="w-full text-center font-medium">Current progress is {{progress()}}%</span>
+
+  <div class="w-full flex bg-red-700 h-6 rounded-md">
+    <div class="bg-green-700" [style.width.%]="progress()"></div>
   </div>
 </section>
 
 <ng-template #button let-value let-type="type">
   <button 
     type="button" 
-    class="flex-1 font-medium rounded-md p-1" 
-    [ngClass]="type == 'Add' ? 'bg-[--positive-color] hover:bg-[--positive-hover-color]' : 'bg-[--negative-color] hover:bg-[--negative-hover-color]'"
+    class="flex-1 font-medium rounded-md p-1 hover:opacity-75" 
+    [ngClass]="type.includes('+') ? 'bg-green-700' : 'bg-red-700'"
     (click)="updateValue(value)">
-    {{type}} {{value}}
+    {{type}}
   </button>
 </ng-template>

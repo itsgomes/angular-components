@@ -17,12 +17,9 @@ export class ProgressBarComponent {
   
   protected updateValue(value: number): void {
     this.progress.update(progress => {
-      if ((progress + value) < 0)
-        return 0;
-      else if ((progress + value) > 100)
-        return 100;
-      else 
-        return progress + value;
+      if ((progress + value) < 0) return 0;
+      else if ((progress + value) > 100) return 100;
+      else return progress + value;
     });
   }
 }

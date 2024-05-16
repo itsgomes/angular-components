@@ -5,9 +5,9 @@
     <h1 class="text-xl text-justify font-bold line-clamp-2">{{ component().title }}</h1>
     <p class="text-justify text-[--text-secondary-color] line-clamp-4 my-2">{{ component().description }}</p>
     <button type="button" 
-      class="self-end font-semibold rounded-sm text-[--primary-color] hover:text-[--hover-color] hover:underline mt-auto" 
+      class="self-end font-semibold rounded-sm text-[--primary-color] hover:text-[--hover-color] hover:underline hover:underline-offset-4 mt-auto" 
       (click)="onOpenComponent.emit(component())">
-      Read more
+      Show component
     </button>
   </div>
 </div>

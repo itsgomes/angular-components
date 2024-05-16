@@ -1,4 +1,4 @@
-<section class="w-80 flex flex-col items-center gap-4 p-4 mx-auto">
+<section class="max-w-80 flex flex-col items-center gap-4 p-4 mx-auto">
   <div class="grid border border-[--border-color] overflow-hidden" 
     [@slide]="{
       value: currentImageIndex(),
@@ -19,8 +19,8 @@
   </div>
 
   <div class="w-full flex flex-col sm:flex-row gap-4">
-    <button type="button" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] hover:bg-[--hover-color] disabled:bg-[--disabled-color]" (click)="previous()" [disabled]="currentImageIndex() == minImageIndex">Previous</button>
-    <button type="button" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] hover:bg-[--hover-color] disabled:bg-[--disabled-color]" (click)="next()" [disabled]="currentImageIndex() == maxImageIndex">Next</button>
+    <button type="button" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] hover:opacity-75 disabled:bg-transparent" (click)="previous()" [disabled]="currentImageIndex() == minImageIndex">Previous</button>
+    <button type="button" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] hover:opacity-75 disabled:bg-transparent" (click)="next()" [disabled]="currentImageIndex() == maxImageIndex">Next</button>
   </div>
 </section>
 
