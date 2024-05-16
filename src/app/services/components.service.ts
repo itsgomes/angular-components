@@ -13,7 +13,7 @@ export class ComponentsService {
   public async getComponentClass(componentType: ComponentsType): Promise<any> {
     switch (componentType) {
       case ComponentsType.GalleryAnimations:
-        return null;
+        return await import ('./../components/gallery-animations/gallery-animations.component').then(component => component.GalleryAnimationsComponent);
       case ComponentsType.ProgressBar: 
         return await import('./../components/progress-bar/progress-bar.component').then(component => component.ProgressBarComponent);
       case ComponentsType.OnlineChecker: 

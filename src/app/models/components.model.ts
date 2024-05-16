@@ -15,19 +15,19 @@ export const AVAILABLE_COMPONENTS: Components[] = [
   { 
     id: ComponentsType.GalleryAnimations,
     title: 'Gallery slider using angular animations',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt egestas eleifend. Pellentesque feugiat posuere orci imperdiet lacinia.',
+    description: 'A way to create and use animations without CSS. Do not miss import the angular animations provider to your application module.',
     image: '1.jpg',
   },
   { 
     id: ComponentsType.ProgressBar,
-    title: 'Linear Progress Bar',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt egestas eleifend. Pellentesque feugiat posuere orci imperdiet lacinia.',
+    title: 'Linear progress bar',
+    description: 'Some of my best practices to create a linear progress bar component.',
     image: '2.jpg',
   },
   { 
     id: ComponentsType.OnlineChecker,
-    title: 'Online Checker',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt egestas eleifend. Pellentesque feugiat posuere orci imperdiet lacinia.',
+    title: 'Online checker',
+    description: 'This is one method to listen the browser connectivity. This component is able to show if your browser still connected or not.',
     image: '3.jpg',
   }
 ];

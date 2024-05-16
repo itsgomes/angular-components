@@ -12,13 +12,13 @@ import { Components } from "../../models/components.model";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePage {
-  protected hasComponentSelected: WritableSignal<boolean> = signal(false);
+  protected hasComponentOpened: WritableSignal<boolean> = signal(false);
   protected componentTpl: Signal<ViewContainerRef> = viewChild.required('vcr', { read: ViewContainerRef });
 
   public constructor(public componentsService: ComponentsService) {}
 
   protected async openComponent(component: Components): Promise<void> {
-    this.hasComponentSelected.set(true);
+    this.hasComponentOpened.set(true);
 
     const componentClass = await this.componentsService.getComponentClass(component.id);
     if (!componentClass) return;
@@ -28,7 +28,7 @@ export class HomePage {
   }
 
   protected back(): void {
-    this.hasComponentSelected.set(false);
+    this.hasComponentOpened.set(false);
     this.componentTpl().clear();
   }
 }

@@ -14,8 +14,15 @@ import { FormsModule } from "@angular/forms";
 })
 export class ProgressBarComponent {
   protected progress: WritableSignal<number> = signal(0);
-
+  
   protected updateValue(value: number): void {
-    this.progress.update(progress => progress + value);
+    this.progress.update(progress => {
+      if ((progress + value) < 0)
+        return 0;
+      else if ((progress + value) > 100)
+        return 100;
+      else 
+        return progress + value;
+    });
   }
 }
