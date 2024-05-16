@@ -7,7 +7,8 @@ export interface Components {
 
 export enum ComponentsType {
   GalleryAnimations,
-  ProgressBar
+  ProgressBar,
+  OnlineChecker
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -22,5 +23,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Linear Progress Bar',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt egestas eleifend. Pellentesque feugiat posuere orci imperdiet lacinia.',
     image: '2.jpg',
+  },
+  { 
+    id: ComponentsType.OnlineChecker,
+    title: 'Online Checker',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt egestas eleifend. Pellentesque feugiat posuere orci imperdiet lacinia.',
+    image: '3.jpg',
   }
 ];

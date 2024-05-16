@@ -16,6 +16,8 @@ export class ComponentsService {
         return null;
       case ComponentsType.ProgressBar: 
         return await import('./../components/progress-bar/progress-bar.component').then(component => component.ProgressBarComponent);
+      case ComponentsType.OnlineChecker: 
+        return await import('./../components/online-checker/online-checker.component').then(component => component.OnlineCheckerComponent);
     }
   }
 }

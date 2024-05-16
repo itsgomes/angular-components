@@ -1,0 +1,14 @@
+<section class="flex justify-center items-center gap-4 p-4 w-full">
+  @if (online$ | async) {
+    <ng-container [ngTemplateOutlet]="dot" [ngTemplateOutletContext]="{ $implicit: true }"></ng-container>
+    <span>Hello, you're online at the moment.</span>
+  }
+  @else {
+    <ng-container [ngTemplateOutlet]="dot" [ngTemplateOutletContext]="{ $implicit: false }"></ng-container>
+    <span>Oops, something is wrong with your internet. You're offline.</span>
+  }
+</section>
+
+<ng-template #dot let-online>
+  <span class="inline-block h-5 min-w-5 rounded-full" [ngClass]="online ? 'bg-[--positive-color]' : 'bg-[--negative-color]'"></span>
+</ng-template>
