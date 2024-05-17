@@ -8,7 +8,8 @@ export interface Components {
 export enum ComponentsType {
   GalleryAnimations,
   ProgressBar,
-  OnlineChecker
+  OnlineChecker,
+  DelayedInput
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -29,5 +30,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Online checker',
     description: 'This is one method to listen the browser connectivity. This component is able to show if your browser still connected or not.',
     image: '3.jpg',
+  },
+  { 
+    id: ComponentsType.DelayedInput,
+    title: 'Delayed input',
+    description: 'Useful for search input. This component are using form control to subscribe the value changes.',
+    image: '4.jpg',
   }
 ];

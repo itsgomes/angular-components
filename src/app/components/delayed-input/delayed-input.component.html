@@ -1,0 +1,10 @@
+<section class="w-full flex flex-col items-center gap-4 p-4">
+  <div class="flex flex-col">
+    <label for="search" class="text-center mb-2">The value of this search bar will be emitted after (<strong class="text-[--primary-color]">{{debounceTime()}}ms</strong>)</label>
+    <input type="text" class="text-black text-center p-2" id="search" name="search" [formControl]="formValue">
+  </div>
+
+  @if (message()) {
+    <span class="text-center">{{message()}}</span>
+  }
+</section>

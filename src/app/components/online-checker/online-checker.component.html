@@ -1,4 +1,4 @@
-<section class="flex justify-center items-center gap-4 p-4 w-full">
+<section class="w-full flex justify-center items-center gap-4 p-4">
   @if (online$ | async) {
     <ng-container [ngTemplateOutlet]="dot" [ngTemplateOutletContext]="{ $implicit: true }"></ng-container>
     <span>Hello, you're online at the moment.</span>

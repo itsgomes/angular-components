@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Signal, ViewContainerRef, WritableSignal, signal, viewChild } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ComponentsService } from "../../services/components.service";
-import { ComponentCardComponent } from "../../components/component-card/component-card.component";
+import { ComponentCardComponent } from "../../components/shared/component-card/component-card.component";
 import { Components } from "../../models/components.model";
 
 @Component({
