@@ -9,7 +9,8 @@ export enum ComponentsType {
   GalleryAnimations,
   ProgressBar,
   OnlineChecker,
-  DelayedInput
+  DelayedInput,
+  ResizableElement
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -36,5 +37,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Delayed input',
     description: 'Useful for search input. This component are using form control to subscribe the value changes.',
     image: '4.jpg',
+  },
+  { 
+    id: ComponentsType.ResizableElement,
+    title: 'Resizable element using observer',
+    description: 'Watching the element size independent of the viewport. Observation will respond to every change of Elements size.',
+    image: '5.jpg',
   }
 ];
