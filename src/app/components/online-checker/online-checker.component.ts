@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { Observable, fromEvent, map, merge, of } from "rxjs";
+import { ChangeDetectionStrategy, Component, Signal } from "@angular/core";
+import { fromEvent, map, merge, of } from "rxjs";
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-online-checker',
@@ -10,9 +11,10 @@ import { Observable, fromEvent, map, merge, of } from "rxjs";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OnlineCheckerComponent {
-  protected online$: Observable<boolean> = merge(
-    of(navigator.onLine),
-    fromEvent(window, 'online').pipe(map(() => true)),
-    fromEvent(window, 'offline').pipe(map(() => false))
-  );
+  protected online: Signal<boolean> = toSignal(
+    merge(
+      of(navigator.onLine),
+      fromEvent(window, 'online').pipe(map(() => true)),
+      fromEvent(window, 'offline').pipe(map(() => false))
+    ), { requireSync: true });
 }
