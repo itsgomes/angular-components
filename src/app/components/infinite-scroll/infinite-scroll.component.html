@@ -1,0 +1,12 @@
+<section class="w-full flex flex-col justify-center items-center gap-4 p-4">
+  <span class="text-center">An additional 30 items will be added to your list whenever the scroll reaches the end.</span>
+
+  <div class="w-full max-w-80 h-80 flex flex-col overflow-auto border" infiniteScroll (onEnd)="onEnd()">
+    @for (item of array(); track $index; let even = $even) {
+      <span class="cursor-default p-2" 
+        [ngClass]="{ 'text-[--primary-color]' : even }">
+        {{item + $index}}
+      </span>
+    }
+  </div>
+</section>

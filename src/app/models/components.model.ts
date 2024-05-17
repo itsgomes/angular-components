@@ -10,7 +10,8 @@ export enum ComponentsType {
   ProgressBar,
   OnlineChecker,
   DelayedInput,
-  ResizableElement
+  ResizableElement,
+  InfiniteScroll
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -43,5 +44,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Resizable element using observer',
     description: 'Watching the element size independent of the viewport. Observation will respond to every change of Elements size.',
     image: '5.jpg',
+  },
+  { 
+    id: ComponentsType.InfiniteScroll,
+    title: 'Infinite scroll',
+    description: 'Useful to retrieve more data from any backend API whenever scroll is near end.',
+    image: '6.jpg',
   }
 ];
