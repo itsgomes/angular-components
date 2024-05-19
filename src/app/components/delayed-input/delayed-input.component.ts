@@ -28,6 +28,6 @@ export class DelayedInputComponent {
   }
 
   private onValueChanged(value: string): void {
-    this.message.set(`After ${this.debounceTime()}ms the value was changed to '${value}'.`);
+    this.message.set(`After ${this.debounceTime()}ms the value '${value}' was emitted.`);
   }
 }

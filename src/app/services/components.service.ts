@@ -18,6 +18,8 @@ export class ComponentsService {
         return await import('./../components/progress-bar/progress-bar.component').then(component => component.ProgressBarComponent);
       case ComponentsType.OnlineChecker: 
         return await import('./../components/online-checker/online-checker.component').then(component => component.OnlineCheckerComponent);
+      case ComponentsType.DelayedInput: 
+        return await import('./../components/delayed-input/delayed-input.component').then(component => component.DelayedInputComponent);
       case ComponentsType.ResizableElement: 
         return await import('./../components/resizable-element/resizable-element.component').then(component => component.ResizableElementComponent);
       case ComponentsType.InfiniteScroll: 
