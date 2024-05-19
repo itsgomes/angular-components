@@ -5,9 +5,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, Writa
 @Component({
   selector: 'app-gallery-animations',
   standalone: true,
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   templateUrl: './gallery-animations.component.html',
   animations: [
     trigger('slide', [

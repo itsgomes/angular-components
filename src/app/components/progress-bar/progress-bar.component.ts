@@ -5,10 +5,7 @@ import { FormsModule } from "@angular/forms";
 @Component({
   selector: 'app-progress-bar',
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './progress-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

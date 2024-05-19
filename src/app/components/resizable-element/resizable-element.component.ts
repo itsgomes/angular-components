@@ -6,9 +6,7 @@ import { distinctUntilChanged } from "rxjs";
 @Component({
   selector: 'app-resizable-element',
   standalone: true,
-  imports: [
-    ReactiveFormsModule
-  ],
+  imports: [ReactiveFormsModule],
   templateUrl: './resizable-element.component.html'
 })
 export class ResizableElementComponent implements AfterViewInit, OnDestroy {

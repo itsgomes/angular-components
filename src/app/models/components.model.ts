@@ -11,7 +11,8 @@ export enum ComponentsType {
   OnlineChecker,
   DelayedInput,
   ResizableElement,
-  InfiniteScroll
+  InfiniteScroll,
+  VirtualScroll
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -50,5 +51,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Infinite scroll',
     description: 'Useful to retrieve more data from any backend API whenever scroll is near end.',
     image: '6.jpg',
+  },
+  { 
+    id: ComponentsType.VirtualScroll,
+    title: 'Virtual scroll',
+    description: 'Powerful feature provided by the @angular/cdk library that enables efficient rendering of large lists by displaying only the items visible in the viewport.',
+    image: '7.jpg',
   }
 ];

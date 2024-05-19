@@ -24,6 +24,8 @@ export class ComponentsService {
         return await import('./../components/resizable-element/resizable-element.component').then(component => component.ResizableElementComponent);
       case ComponentsType.InfiniteScroll: 
         return await import('./../components/infinite-scroll/infinite-scroll.component').then(component => component.InfiniteScrollComponent);
+      case ComponentsType.VirtualScroll: 
+        return await import('./../components/virtual-scroll/virtual-scroll.component').then(component => component.VirtualScrollComponent);
     }
   }
 }
