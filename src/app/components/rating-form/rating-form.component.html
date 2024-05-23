@@ -1,0 +1,19 @@
+<section class="w-full flex justify-center p-4">
+  <form class="flex flex-col gap-4" [formGroup]="form" (submit)="onSubmit()">
+    <p>What did you think of the content on our website?</p>
+
+    <div class="w-full flex flex-col">
+      <label for="comment" class="font-medium">Comment</label>
+      <textarea formControlName="comment" id="comment" name="comment" rows="5" class="text-black"></textarea>
+    </div>
+
+    <div class="w-full flex flex-col">
+      <label for="rating" class="font-medium">Rate</label>
+      <app-rating formControlName="rating" id="rating" name="rating"></app-rating>
+    </div>
+
+    <div class="w-full flex flex-col">
+      <button type="submit" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] enabled:hover:opacity-75 disabled:bg-gray-400" [disabled]="form.invalid">Submit form</button>
+    </div>
+  </form>
+</section>

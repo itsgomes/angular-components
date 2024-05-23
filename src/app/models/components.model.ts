@@ -12,7 +12,8 @@ export enum ComponentsType {
   DelayedInput,
   ResizableElement,
   InfiniteScroll,
-  VirtualScroll
+  VirtualScroll,
+  RatingForm
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -57,5 +58,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Virtual scroll',
     description: 'Powerful feature provided by the @angular/cdk library that enables efficient rendering of large lists by displaying only the items visible in the viewport.',
     image: '7.jpg',
+  },
+  { 
+    id: ComponentsType.RatingForm,
+    title: 'Reactive Forms using CVA rating component',
+    description: 'Create custom inputs to work with Angular Forms API using Custom Value Accessor.',
+    image: '8.jpg',
   }
 ];

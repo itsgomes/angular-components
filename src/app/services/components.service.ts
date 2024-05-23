@@ -26,6 +26,8 @@ export class ComponentsService {
         return await import('./../components/infinite-scroll/infinite-scroll.component').then(component => component.InfiniteScrollComponent);
       case ComponentsType.VirtualScroll: 
         return await import('./../components/virtual-scroll/virtual-scroll.component').then(component => component.VirtualScrollComponent);
+      case ComponentsType.RatingForm: 
+        return await import('./../components/rating-form/rating-form.component').then(component => component.RatingFormComponent);
     }
   }
 }
