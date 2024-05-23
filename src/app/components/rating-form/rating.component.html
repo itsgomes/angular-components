@@ -3,7 +3,7 @@
     @for (rating of ratings; track $index) {
       <svg height="25" width="23" 
         class="fill-[--text-color] hover:scale-105 hover:fill-[--primary-color]" 
-        [ngClass]="{ 'fill-[--primary-color]' : value() >= rating.ratingLevel }"
+        [ngClass]="{ '!fill-[--primary-color]' : value() >= rating.ratingLevel }"
         (click)="setRatingValue(rating)"
       >
         <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule: nonzero;" />
