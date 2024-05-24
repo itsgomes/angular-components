@@ -1,7 +1,7 @@
-import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, WritableSignal, signal } from "@angular/core";
-import { InfiniteScrollDirective } from "../../directives/infinite-scroll.directive";
-import Utils from "../../shared/utils";
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
+import { InfiniteScrollDirective } from '../../directives/infinite-scroll.directive';
+import Utils from '../../utils/utils';
 
 @Component({
   selector: 'app-infinite-scroll',

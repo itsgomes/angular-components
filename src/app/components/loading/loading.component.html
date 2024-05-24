@@ -1,0 +1,13 @@
+<section class="w-full flex flex-col justify-center gap-4 p-4">
+  <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <button type="button" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] enabled:hover:opacity-75 disabled:bg-gray-400" (click)="request(200)" [disabled]="loadingService.isLoading()">Request Status 200</button>
+    <button type="button" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] enabled:hover:opacity-75 disabled:bg-gray-400" (click)="request(404)" [disabled]="loadingService.isLoading()">Request Status 404</button>
+  </div>
+
+  @if (loadingService.isLoading()) {
+    <span class="font-medium text-green-700 text-center">Application loading state is true</span>
+  }
+  @else {
+    <span class="font-medium text-red-700 text-center">Application loading state is false</span>
+  }
+</section>

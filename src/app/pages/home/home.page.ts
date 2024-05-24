@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, Signal, ViewContainerRef, WritableSignal, signal, viewChild } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { ComponentsService } from "../../services/components.service";
-import { ComponentCardComponent } from "../../components/shared/component-card/component-card.component";
-import { Components } from "../../models/components.model";
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Signal, signal, viewChild, ViewContainerRef, WritableSignal } from '@angular/core';
+import { ComponentCardComponent } from '../../components/shared/component-card/component-card.component';
+import { Components } from '../../models/components.model';
+import { ComponentsService } from '../../services/components.service';
 
 @Component({
   selector: 'app-home',

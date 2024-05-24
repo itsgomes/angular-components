@@ -1,6 +1,6 @@
-import { DestroyRef, Directive, ElementRef, OutputEmitterRef, output } from "@angular/core";
-import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { debounceTime, distinctUntilChanged, fromEvent } from "rxjs";
+import { debounceTime, distinctUntilChanged, fromEvent } from 'rxjs';
+import { DestroyRef, Directive, ElementRef, output, OutputEmitterRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Directive({
   selector: '[infiniteScroll]',

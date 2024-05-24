@@ -1,6 +1,6 @@
-import { animate, group, query, style, transition, trigger } from "@angular/animations";
-import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, WritableSignal, signal } from "@angular/core";
+import { animate, group, query, style, transition, trigger } from '@angular/animations';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-animations',

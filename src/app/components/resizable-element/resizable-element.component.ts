@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, DestroyRef, ElementRef, OnDestroy, Signal, WritableSignal, signal, viewChild } from "@angular/core";
-import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { FormControl, ReactiveFormsModule } from "@angular/forms";
-import { distinctUntilChanged } from "rxjs";
+import { distinctUntilChanged } from 'rxjs';
+import { AfterViewInit, Component, DestroyRef, ElementRef, OnDestroy, Signal, signal, viewChild, WritableSignal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-resizable-element',

@@ -13,7 +13,8 @@ export enum ComponentsType {
   ResizableElement,
   InfiniteScroll,
   VirtualScroll,
-  RatingForm
+  RatingForm,
+  LoadingState
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -64,5 +65,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Reactive Forms using CVA rating component',
     description: 'Create custom inputs to work with Angular Forms API using Custom Value Accessor.',
     image: '8.jpg',
+  },
+  {
+    id: ComponentsType.LoadingState,
+    title: 'Intercepting HTTP Request to show loading state',
+    description: 'Best way to intercept http request and communicate loading service to show loading state.',
+    image: '9.jpg',
   }
 ];

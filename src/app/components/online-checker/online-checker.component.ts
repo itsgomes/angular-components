@@ -1,6 +1,6 @@
-import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, Signal } from "@angular/core";
-import { fromEvent, map, merge, of } from "rxjs";
+import { fromEvent, map, merge, of } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({

@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, WritableSignal, signal } from "@angular/core";
-import { FormControl, ReactiveFormsModule } from "@angular/forms";
-import { debounceTime, distinctUntilChanged } from "rxjs";
+import { debounceTime, distinctUntilChanged } from 'rxjs';
+import { ChangeDetectionStrategy, Component, DestroyRef, signal, WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-delayed-input',

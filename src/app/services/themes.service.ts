@@ -1,6 +1,6 @@
-import { Inject, Injectable, WritableSignal, signal } from "@angular/core";
-import { DOCUMENT } from "@angular/common";
-import { Theme } from "../models/theme.model";
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable, signal, WritableSignal } from '@angular/core';
+import { Theme } from '../models/theme.model';
 
 @Injectable({
   providedIn: 'root'

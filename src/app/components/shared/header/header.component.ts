@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { ButtonThemeComponent } from "../button-theme/button-theme.component";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ButtonThemeComponent } from '../button-theme/button-theme.component';
 
 @Component({
   selector: 'app-header',

@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, WritableSignal, signal } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import Utils from "../../shared/utils";
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
+import Utils from '../../utils/utils';
 
 @Component({
   selector: 'app-virtual-scroll',

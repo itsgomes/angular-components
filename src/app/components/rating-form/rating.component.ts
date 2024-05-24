@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, WritableSignal, forwardRef, signal } from "@angular/core";
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
-import { RATINGS, Rating } from "./rating.model";
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, forwardRef, signal, WritableSignal } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Rating, RATINGS } from './rating.model';
 
 @Component({
   selector: 'app-rating',

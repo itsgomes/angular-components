@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { AVAILABLE_COMPONENTS, Components, ComponentsType } from "../models/components.model";
-import { Observable, of } from "rxjs";
+import { Observable, of } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { AVAILABLE_COMPONENTS, Components, ComponentsType } from '../models/components.model';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +28,8 @@ export class ComponentsService {
         return await import('./../components/virtual-scroll/virtual-scroll.component').then(component => component.VirtualScrollComponent);
       case ComponentsType.RatingForm: 
         return await import('./../components/rating-form/rating-form.component').then(component => component.RatingFormComponent);
+      case ComponentsType.LoadingState: 
+        return await import('./../components/loading/loading.component').then(component => component.LoadingComponent);
     }
   }
 }
