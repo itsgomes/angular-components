@@ -1,4 +1,4 @@
-<section class="w-full flex justify-center items-center gap-4 p-4">
+<app-template-component>
   @if (online()) {
     <ng-container [ngTemplateOutlet]="dot" [ngTemplateOutletContext]="{ $implicit: true }"></ng-container>
     <span>Hello, you're online at the moment.</span>
@@ -7,7 +7,7 @@
     <ng-container [ngTemplateOutlet]="dot" [ngTemplateOutletContext]="{ $implicit: false }"></ng-container>
     <span>Oops, something is wrong with your internet. You're offline.</span>
   }
-</section>
+</app-template-component>
 
 <ng-template #dot let-online>
   <span class="inline-block h-5 w-5 rounded-full" [ngClass]="online ? 'bg-green-700' : 'bg-red-700'"></span>

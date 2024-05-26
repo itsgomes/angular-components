@@ -7,7 +7,7 @@
 @else {
   <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 p-4">
     @for (component of componentsService.getComponents() | async; track $index) {
-      <app-component-card [component]="component" (onOpenComponent)="openComponent($event)"></app-component-card>
+      <app-card-component [component]="component" (onOpenComponent)="openComponent($event)" />
     }
   </div>
 }

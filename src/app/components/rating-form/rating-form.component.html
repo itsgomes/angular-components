@@ -1,5 +1,5 @@
-<section class="w-full flex justify-center p-4">
-  <form class="flex flex-col gap-4" [formGroup]="form" (submit)="onSubmit()">
+<app-template-component>
+  <form class="flex flex-col gap-4" [formGroup]="form">
     <p>What did you think of the content on our website?</p>
 
     <div class="w-full flex flex-col">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="w-full flex flex-col">
-      <button type="submit" class="flex-1 font-medium rounded-md p-1 bg-[--primary-color] enabled:hover:opacity-75 disabled:bg-gray-400" [disabled]="form.invalid">Submit form</button>
+      <app-button title="Submit form" [disabled]="form.invalid" (onButtonClick)="onSubmit()" />
     </div>
   </form>
-</section>
+</app-template-component>

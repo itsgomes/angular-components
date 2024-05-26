@@ -1,4 +1,4 @@
-export interface Components {
+export type Components = {
   id: ComponentsType;
   title: string;
   description: string;

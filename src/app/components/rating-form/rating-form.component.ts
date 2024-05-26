@@ -1,14 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 import { RatingComponent } from './rating.component';
+import { TemplateComponent } from '../../shared/components/template/template.component';
 
 @Component({
   selector: 'app-rating-form',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    RatingComponent
-  ],
+  imports: [ReactiveFormsModule, ButtonComponent, RatingComponent, TemplateComponent],
   templateUrl: './rating-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -4,13 +4,13 @@ import { Theme } from '../../../models/theme.model';
 import { ThemesService } from '../../../services/themes.service';
 
 @Component({
-  selector: 'app-button-theme',
+  selector: 'app-theme-button',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: 'button-theme.component.html',
+  templateUrl: 'theme-button.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonThemeComponent {
+export class ThemeButtonComponent {
   public get Theme(): typeof Theme {
     return Theme;
   }

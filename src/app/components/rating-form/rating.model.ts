@@ -1,4 +1,4 @@
-export interface Rating {
+export type Rating = {
   ratingLevel: number;
   ratingLevelName: RatingLevelName;
 }

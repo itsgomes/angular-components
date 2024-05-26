@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
 import { InfiniteScrollDirective } from '../../directives/infinite-scroll.directive';
 import Utils from '../../utils/utils';
+import { TemplateComponent } from '../../shared/components/template/template.component';
 
 @Component({
   selector: 'app-infinite-scroll',
   standalone: true,
-  imports: [CommonModule, InfiniteScrollDirective],
+  imports: [CommonModule, InfiniteScrollDirective, TemplateComponent],
   templateUrl: './infinite-scroll.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

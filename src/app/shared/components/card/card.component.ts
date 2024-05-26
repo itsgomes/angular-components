@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, input, InputSignal, output, OutputE
 import { Components } from '../../../models/components.model';
 
 @Component({
-  selector: 'app-component-card',
+  selector: 'app-card-component',
   standalone: true,
-  templateUrl: './component-card.component.html',
+  templateUrl: './card.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ComponentCardComponent {
+export class CardComponent {
   public component: InputSignal<Components> = input.required<Components>();
   public onOpenComponent: OutputEmitterRef<Components> = output<Components>();
 }

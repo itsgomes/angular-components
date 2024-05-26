@@ -1,0 +1,12 @@
+<button 
+  type="button" 
+  class="w-full p-1 font-medium rounded-md enabled:hover:opacity-75 disabled:bg-gray-400" 
+  [ngClass]="{ 
+    'bg-[--primary-color]' : buttonColor() == 'primary', 
+    'bg-green-700' : buttonColor() == 'success', 
+    'bg-red-700' : buttonColor() == 'danger' 
+  }"
+  [disabled]="disabled()"
+  (click)="onButtonClick.emit()">
+  {{ title }}
+</button>

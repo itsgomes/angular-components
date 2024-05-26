@@ -1,11 +1,11 @@
-<section class="w-full flex flex-col gap-4 p-4">
+<app-template-component>
   <div class="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 10, type: '+10' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 25, type: '+25' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: 50, type: '+50' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -50, type: '-50' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -25, type: '-25' }"></ng-container>
-    <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: -10, type: '-10' }"></ng-container>
+    <app-button title="+10" buttonColor="success" (onButtonClick)="updateValue(10)"/>
+    <app-button title="+25" buttonColor="success" (onButtonClick)="updateValue(25)"/>
+    <app-button title="+50" buttonColor="success" (onButtonClick)="updateValue(50)"/>
+    <app-button title="-50" buttonColor="danger" (onButtonClick)="updateValue(-50)"/>
+    <app-button title="-25" buttonColor="danger" (onButtonClick)="updateValue(-25)"/>
+    <app-button title="-10" buttonColor="danger" (onButtonClick)="updateValue(-10)"/>
   </div>
 
   <span class="w-full text-center font-medium">Current progress is {{progress()}}%</span>
@@ -13,14 +13,4 @@
   <div class="w-full flex bg-red-700 h-6 rounded-md">
     <div class="bg-green-700 rounded-s-md" [style.width.%]="progress()"></div>
   </div>
-</section>
-
-<ng-template #button let-value let-type="type">
-  <button 
-    type="button" 
-    class="flex-1 font-medium rounded-md p-1 hover:opacity-75" 
-    [ngClass]="type.includes('+') ? 'bg-green-700' : 'bg-red-700'"
-    (click)="updateValue(value)">
-    {{type}}
-  </button>
-</ng-template>
+</app-template-component>

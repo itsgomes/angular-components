@@ -1,5 +1,7 @@
-<section class="w-full flex flex-col items-center gap-4 p-4">
-  <span class="font-medium text-center">{{message()}}</span>
+<app-template-component>
+  <header>
+    <span class="font-medium text-center">{{message()}}</span>
+  </header>
 
   <div class="grid grid-cols-3 gap-2 border border-dashed border-[--text-color] box-border p-3" [style.fontSize.px]="fontSize()" #container>
     @for (item of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track $index) {
@@ -8,4 +10,5 @@
   </div>
 
   <input [formControl]="sliderValue" type="range" min="9" max="32" step="1"> 
-</section>
+
+</app-template-component>
