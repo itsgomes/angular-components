@@ -1,7 +1,7 @@
-import { distinctUntilChanged } from 'rxjs';
-import { AfterViewInit, Component, DestroyRef, ElementRef, OnDestroy, Signal, signal, viewChild, WritableSignal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, Signal, signal, viewChild, WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { distinctUntilChanged } from 'rxjs';
 
 @Component({
   selector: 'app-resizable-element',
@@ -17,11 +17,11 @@ export class ResizableElementComponent implements AfterViewInit, OnDestroy {
   
   protected resizeObserver!: ResizeObserver;
 
-  public constructor(private destroyRef: DestroyRef) {
+  public constructor() {
     this.sliderValue.valueChanges
       .pipe(
         distinctUntilChanged(),
-        takeUntilDestroyed(this.destroyRef)
+        takeUntilDestroyed()
       )
       .subscribe(value => this.fontSize.set(value)
     );

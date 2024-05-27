@@ -16,5 +16,4 @@ export class ButtonComponent {
   public readonly buttonColor: InputSignal<ButtonColor> = input<ButtonColor>('primary');
   public readonly disabled: InputSignal<boolean | undefined> = input<boolean>();
   public onButtonClick: OutputEmitterRef<void> = output<void>();
-
 }

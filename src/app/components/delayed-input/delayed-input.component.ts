@@ -1,7 +1,7 @@
-import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { ChangeDetectionStrategy, Component, DestroyRef, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, WritableSignal, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
   selector: 'app-delayed-input',
@@ -15,12 +15,12 @@ export class DelayedInputComponent {
   protected debounceTime: WritableSignal<number> = signal(1000);
   protected message: WritableSignal<string> = signal('');
 
-  public constructor(private destroyRef: DestroyRef) {
+  public constructor() {
     this.formValue.valueChanges
       .pipe(
         debounceTime(this.debounceTime()),
         distinctUntilChanged(),
-        takeUntilDestroyed(this.destroyRef)
+        takeUntilDestroyed()
       ).subscribe((value: string | null) => { 
         if (value?.trim()) 
           this.onValueChanged(value) 

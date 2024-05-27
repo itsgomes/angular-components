@@ -1,5 +1,5 @@
-import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { AVAILABLE_COMPONENTS, Components, ComponentsType } from '../models/components.model';
 
 @Injectable({
@@ -32,6 +32,8 @@ export class ComponentsService {
         return await import('../components/loading-example/loading-example.component').then(component => component.LoadingExampleComponent);
       case ComponentsType.Toaster: 
         return await import('../components/toaster-example/toaster-example.component').then(component => component.ToasterExampleComponent);
+      case ComponentsType.Modal: 
+        return await import('../components/modal-example/modal-example.component').then(component => component.ModalExampleComponent);
     }
   }
 }

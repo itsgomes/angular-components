@@ -15,7 +15,8 @@ export enum ComponentsType {
   VirtualScroll,
   RatingForm,
   LoadingState,
-  Toaster
+  Toaster,
+  Modal
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -78,5 +79,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Custom toaster service',
     description: 'Its easy to control any toaster you want to display. Lets take a look.',
     image: '10.jpg',
+  },
+  {
+    id: ComponentsType.Modal,
+    title: 'Custom modal service',
+    description: 'Displaying modal with custom content.',
+    image: '11.jpg',
   }
 ];

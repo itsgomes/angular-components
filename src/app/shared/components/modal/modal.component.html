@@ -1,0 +1,15 @@
+@if (modalService.modal(); as modal) {
+  <div class="fixed top-2/4 left-2/4 max-h-[80vh] transform-50 flex flex-col gap-6 py-4 px-2 bg-[--background-color] border drop-shadow-sm z-20" #modalContainer>
+    <header class="text-xl font-bold uppercase px-4">{{modal.title}}</header>
+  
+    <div class="text-justify px-4 overflow-auto">
+      <ng-container #vcr></ng-container>
+    </div>
+  
+    <footer class="flex justify-end px-4">
+      <app-button title="Close" (onButtonClick)="close()" />
+    </footer>
+  </div>
+  
+  <div class="fixed top-0 left-0 h-screen w-screen bg-black/85 z-10"></div>
+}
