@@ -2,12 +2,11 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { ChangeDetectionStrategy, Component, DestroyRef, signal, WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { TemplateComponent } from '../../shared/components/template/template.component';
 
 @Component({
   selector: 'app-delayed-input',
   standalone: true,
-  imports: [ReactiveFormsModule, TemplateComponent],
+  imports: [ReactiveFormsModule],
   templateUrl: './delayed-input.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -4,16 +4,15 @@ import { HttpStatusApiService } from '../../services/http-status-api.service';
 import { HTTP_STATUS_SLEEP_TIME } from '../../constants/constant';
 import { LoadingService } from '../../services/loading.service';
 import { ButtonComponent } from '../../shared/components/button/button.component';
-import { TemplateComponent } from '../../shared/components/template/template.component';
 
 @Component({
-  selector: 'app-loading',
+  selector: 'app-loading-component',
   standalone: true,
-  imports: [ButtonComponent, TemplateComponent],
-  templateUrl: './loading.component.html',
+  imports: [ButtonComponent],
+  templateUrl: './loading-example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoadingComponent {
+export class LoadingExampleComponent {
   public constructor(
     protected readonly loadingService: LoadingService, 
     private httpStatusApiService: HttpStatusApiService

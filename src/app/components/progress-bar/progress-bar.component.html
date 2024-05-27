@@ -1,4 +1,4 @@
-<app-template-component>
+<section class="w-full flex flex-col justify-center items-center gap-4 p-4">
   <div class="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
     <app-button title="+10" buttonColor="success" (onButtonClick)="updateValue(10)"/>
     <app-button title="+25" buttonColor="success" (onButtonClick)="updateValue(25)"/>
@@ -13,4 +13,4 @@
   <div class="w-full flex bg-red-700 h-6 rounded-md">
     <div class="bg-green-700 rounded-s-md" [style.width.%]="progress()"></div>
   </div>
-</app-template-component>
+</section>

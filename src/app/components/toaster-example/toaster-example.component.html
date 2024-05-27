@@ -1,0 +1,7 @@
+<section class="flex flex-col justify-center items-center gap-4 p-4 mx-auto">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    @for (toast of toasts(); track $index) {
+      <app-button [title]="toast.message" (onButtonClick)="showToast(toast)" />
+    }
+  </div>
+</section>

@@ -14,7 +14,8 @@ export enum ComponentsType {
   InfiniteScroll,
   VirtualScroll,
   RatingForm,
-  LoadingState
+  LoadingState,
+  Toaster
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -71,5 +72,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Intercepting HTTP Request to show loading state',
     description: 'Best way to intercept http request and communicate loading service to show loading state.',
     image: '9.jpg',
+  },
+  {
+    id: ComponentsType.Toaster,
+    title: 'Custom toaster service',
+    description: 'Its easy to control any toaster you want to display. Lets take a look.',
+    image: '10.jpg',
   }
 ];

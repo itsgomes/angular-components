@@ -2,12 +2,11 @@ import { fromEvent, map, merge, of } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { TemplateComponent } from '../../shared/components/template/template.component';
 
 @Component({
   selector: 'app-online-checker',
   standalone: true,
-  imports: [CommonModule, TemplateComponent],
+  imports: [CommonModule],
   templateUrl: './online-checker.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, HostAttributeToken, InputSignal, OutputEmitterRef, inject, input, output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, InputSignal, OutputEmitterRef, input, output } from "@angular/core";
 
 export type ButtonColor = 'primary' | 'success' | 'danger';
 
@@ -12,10 +12,9 @@ export type ButtonColor = 'primary' | 'success' | 'danger';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
-  protected readonly title: string = inject(new HostAttributeToken('title'));
-  
-  public buttonColor: InputSignal<ButtonColor> = input<ButtonColor>('primary');
-  public disabled: InputSignal<boolean | undefined> = input<boolean>();
+  public readonly title: InputSignal<string> = input.required<string>();
+  public readonly buttonColor: InputSignal<ButtonColor> = input<ButtonColor>('primary');
+  public readonly disabled: InputSignal<boolean | undefined> = input<boolean>();
   public onButtonClick: OutputEmitterRef<void> = output<void>();
 
 }

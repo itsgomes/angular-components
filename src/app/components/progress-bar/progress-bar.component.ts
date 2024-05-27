@@ -2,12 +2,11 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../../shared/components/button/button.component';
-import { TemplateComponent } from '../../shared/components/template/template.component';
 
 @Component({
   selector: 'app-progress-bar',
   standalone: true,
-  imports: [CommonModule, FormsModule, ButtonComponent, TemplateComponent],
+  imports: [CommonModule, FormsModule, ButtonComponent],
   templateUrl: './progress-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

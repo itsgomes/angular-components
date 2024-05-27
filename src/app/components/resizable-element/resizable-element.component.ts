@@ -2,12 +2,11 @@ import { distinctUntilChanged } from 'rxjs';
 import { AfterViewInit, Component, DestroyRef, ElementRef, OnDestroy, Signal, signal, viewChild, WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { TemplateComponent } from '../../shared/components/template/template.component';
 
 @Component({
   selector: 'app-resizable-element',
   standalone: true,
-  imports: [ReactiveFormsModule, TemplateComponent],
+  imports: [ReactiveFormsModule],
   templateUrl: './resizable-element.component.html'
 })
 export class ResizableElementComponent implements AfterViewInit, OnDestroy {

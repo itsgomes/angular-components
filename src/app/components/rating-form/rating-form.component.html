@@ -1,4 +1,4 @@
-<app-template-component>
+<section class="w-full flex flex-col justify-center items-center gap-4 p-4">
   <form class="flex flex-col gap-4" [formGroup]="form">
     <p>What did you think of the content on our website?</p>
 
@@ -16,4 +16,4 @@
       <app-button title="Submit form" [disabled]="form.invalid" (onButtonClick)="onSubmit()" />
     </div>
   </form>
-</app-template-component>
+</section>
