@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Signal, WritableSignal, computed, signal } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { AVAILABLE_COMPONENTS, Components, ComponentsType } from '../models/components.model';
 
@@ -6,6 +6,17 @@ import { AVAILABLE_COMPONENTS, Components, ComponentsType } from '../models/comp
   providedIn: 'root'
 })
 export class ComponentsService {
+  private _hasComponentsOpened: WritableSignal<boolean> = signal(false);
+
+  public get hasComponentsOpened(): Signal<boolean> {
+    return computed(() => this._hasComponentsOpened());
+  }
+
+  public set hasComponentsOpened(value: boolean) {
+    this._hasComponentsOpened.set(value);
+  }
+  
+
   public getComponents(): Observable<Components[]> {
     return of<Components[]>(AVAILABLE_COMPONENTS);
   }

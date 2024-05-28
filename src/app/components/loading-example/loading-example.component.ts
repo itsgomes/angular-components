@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { HttpStatusRequest } from '../../models/http-status-api.model';
+import { HTTP_STATUS_SLEEP_TIME, HttpStatusRequest } from '../../models/http-status-api.model';
 import { HttpStatusApiService } from '../../services/http-status-api.service';
-import { HTTP_STATUS_SLEEP_TIME } from '../../constants/constant';
 import { LoadingService } from '../../services/loading.service';
 import { ButtonComponent } from '../../shared/components/button/button.component';
 

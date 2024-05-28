@@ -1,0 +1,13 @@
+<footer class="flex flex-col items-center gap-4 py-8 px-4 sm:flex-row sm:gap-0 sm:justify-between">
+  <span class="font-mono font-medium">Designed and coded by Rafael Gomes</span>
+
+  <div class="flex gap-4">
+    @for (media of socialMedias; track $index) {
+      <img src="/assets/svg/{{media.icon}}" 
+        class="hover:cursor-pointer hover:scale-105 hover-svg-color" 
+        [ngClass]="{ 'revert-svg-color' : themesService.isDarkTheme() }" 
+        (click)="openSocialMedia(media)"
+      >
+    }
+  </div>
+</footer>

@@ -5,12 +5,11 @@ import { Modal } from "../models/modal.model";
   providedIn: 'root'
 })
 export class ModalService {
+  private _modal: WritableSignal<Modal | undefined> = signal(undefined);
   
   public get modal(): Signal<Modal | undefined> {
     return computed(() => this._modal());
   }
-
-  private _modal: WritableSignal<Modal | undefined> = signal(undefined);
 
   public open(modal: Modal): void {
     this._modal.set(modal);

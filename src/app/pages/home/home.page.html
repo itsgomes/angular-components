@@ -1,11 +1,11 @@
-@if (hasComponentOpened()) {
+@if (componentsService.hasComponentsOpened()) {
   <div class="flex flex-col w-full">
     <ng-container #vcr></ng-container>
     <button class="mt-10 mx-auto font-semibold rounded-sm text-[--primary-color] hover:text-[--text-color] hover:underline hover:underline-offset-4" type="button" (click)="back()">Back to components page</button>
   </div>
 }
 @else {
-  <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 p-4">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4">
     @for (component of componentsService.getComponents() | async; track $index) {
       <app-card-component [component]="component" (onOpenComponent)="openComponent($event)" />
     }

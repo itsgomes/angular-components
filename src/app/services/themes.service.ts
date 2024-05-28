@@ -13,10 +13,18 @@ export class ThemesService {
   }
 
   public toggleTheme(): void {
-    if (this.currentTheme() == Theme.DARK)
+    if (this.isDarkTheme())
       this.setTheme(Theme.LIGHT);
     else
       this.setTheme(Theme.DARK);
+  }
+
+  public isDarkTheme(): boolean {
+    return this.currentTheme() == Theme.DARK;
+  }
+
+  public isLightTheme(): boolean {
+    return this.currentTheme() == Theme.LIGHT;
   }
 
   private initializeOnBootstrap(): void {

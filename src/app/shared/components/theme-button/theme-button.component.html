@@ -1,7 +1,7 @@
-@if (themesService.currentTheme() == Theme.DARK) {
+@if (themesService.isDarkTheme()) {
   <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: '/assets/svg/sun.svg' }"></ng-container>
 }
-@else if (themesService.currentTheme() == Theme.LIGHT) {
+@else if (themesService.isLightTheme()) {
   <ng-container [ngTemplateOutlet]="button" [ngTemplateOutletContext]="{ $implicit: '/assets/svg/moon.svg' }"></ng-container>
 }
 

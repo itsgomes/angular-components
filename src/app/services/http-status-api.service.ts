@@ -1,8 +1,7 @@
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HTTP_STATUS_API_URL } from '../constants/constant';
-import { HttpStatusRequest } from '../models/http-status-api.model';
+import { Observable } from 'rxjs';
+import { HTTP_STATUS_API_URL, HttpStatusRequest } from '../models/http-status-api.model';
 
 @Injectable({
   providedIn: 'root'

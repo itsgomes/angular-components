@@ -5,11 +5,11 @@ import { Toast } from "../models/toast.model";
   providedIn: 'root'
 })
 export class ToasterService {
+  private _toast: WritableSignal<Toast[]> = signal([]);
+
   public get toast(): Signal<Toast[]> {
     return computed(() => this._toast());
   }
-
-  private _toast: WritableSignal<Toast[]> = signal([]);
 
   public add(toast: Toast): void {
     this._toast.update((oldValue: Toast[]) => [...oldValue, toast]);
