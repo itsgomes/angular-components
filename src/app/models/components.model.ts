@@ -29,13 +29,13 @@ export const AVAILABLE_COMPONENTS: Components[] = [
   { 
     id: ComponentsType.ProgressBar,
     title: 'Linear progress bar',
-    description: 'Some of my best practices to create a linear progress bar component.',
+    description: 'An example to create a useful linear progress bar component.',
     image: '2.jpg',
   },
   { 
     id: ComponentsType.OnlineChecker,
     title: 'Online checker',
-    description: 'This is one method to listen the browser connectivity. This component is able to show if your browser still connected or not.',
+    description: 'A method to listen the browser connectivity. This component is able to show if your browser still connected.',
     image: '3.jpg',
   },
   { 
@@ -47,13 +47,13 @@ export const AVAILABLE_COMPONENTS: Components[] = [
   { 
     id: ComponentsType.ResizableElement,
     title: 'Resizable element using observer',
-    description: 'Watching the element size independent of the viewport. Observation will respond to every change of Elements size.',
+    description: 'Watching the element size independent of the viewport. Observation will respond to every change of elements size.',
     image: '5.jpg',
   },
   { 
     id: ComponentsType.InfiniteScroll,
     title: 'Infinite scroll',
-    description: 'Useful to retrieve more data from any backend API whenever scroll is near end.',
+    description: 'Useful to retrieve more data from backend API whenever scroll is near end.',
     image: '6.jpg',
   },
   { 
@@ -65,25 +65,25 @@ export const AVAILABLE_COMPONENTS: Components[] = [
   { 
     id: ComponentsType.RatingForm,
     title: 'Reactive Forms using CVA rating component',
-    description: 'Create custom inputs to work with Angular Forms API using Custom Value Accessor.',
+    description: 'The Control Value Accessor interface in Angular is specifically designed to facilitate two-way data binding between custom form controls and Angular forms.',
     image: '8.jpg',
   },
   {
     id: ComponentsType.LoadingState,
-    title: 'Intercepting HTTP Request to show loading state',
-    description: 'Best way to intercept http request and communicate loading service to show loading state.',
+    title: 'Intercepting HTTP Request',
+    description: 'A simple way to intercept http request and communicate to service for show loading state.',
     image: '9.jpg',
   },
   {
     id: ComponentsType.Toaster,
-    title: 'Custom toaster service',
-    description: 'Its easy to control any toaster you want to display. Lets take a look.',
+    title: 'Toaster service',
+    description: 'Toaster is used to display messages in overlay. An example to create your own toaster service.',
     image: '10.jpg',
   },
   {
     id: ComponentsType.Modal,
-    title: 'Custom modal service',
-    description: 'Displaying modal with custom content.',
+    title: 'Modal service',
+    description: 'Modal is a dialog that appears on front of your app content, and must be dismissed by the app before interaction.',
     image: '11.jpg',
   }
 ];

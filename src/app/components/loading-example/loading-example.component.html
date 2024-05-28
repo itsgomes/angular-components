@@ -1,7 +1,7 @@
 <section class="max-w-80 flex flex-col justify-center items-center gap-4 p-4 mx-auto">
   <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
     <app-button title="Request Status 200" [disabled]="loadingService.isLoading()" (onButtonClick)="request(200)" />
-    <app-button title="Request Status 404" [disabled]="loadingService.isLoading()" (onButtonClick)="request(404)" />
+    <app-button title="Request Status 204" [disabled]="loadingService.isLoading()" (onButtonClick)="request(204)" />
   </div>
 
   @if (loadingService.isLoading()) {
