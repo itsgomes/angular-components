@@ -11,10 +11,6 @@ import { ThemesService } from "../../../services/themes.service";
   imports: [CommonModule],
   templateUrl: './footer.component.html',
   host: { 'class' : 'container' },
-  styles: `
-    .revert-svg-color { filter: invert(100%); } 
-    .hover-svg-color:hover { filter: brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(3639%) hue-rotate(245deg) brightness(83%) contrast(90%); }
-  `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {

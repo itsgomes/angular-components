@@ -18,3 +18,11 @@ html.dark {
 html.light {
   @include light-mode();
 }
+
+.revert-svg-color { 
+  filter: invert(100%); 
+}
+
+.hover-svg-color:hover { 
+  filter: brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(3639%) hue-rotate(245deg) brightness(83%) contrast(90%); 
+}

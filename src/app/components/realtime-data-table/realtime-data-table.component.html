@@ -9,18 +9,18 @@
     <table class="w-full table-auto">
       <thead>
         <tr class="bg-gray-500 sticky top-0">
-          <th class="text-left p-2">ID</th>
-          <th class="text-right p-2">Amount</th>
-          <th class="text-right p-2">Value</th>
+          <th class="text-left px-2">ID</th>
+          <th class="text-right px-2">Amount</th>
+          <th class="text-right px-2">Value</th>
         </tr>
       </thead>
   
       <tbody>
         @for (data of dataset(); track $index; let odd = $odd) {
           <tr [ngClass]="{ 'text-[--primary-color]' : odd }">
-            <td class="text-left p-2">{{data.id}}</td>
-            <td class="text-right p-2">{{data.amount}}</td>
-            <td class="text-right p-2">{{data.value}}</td>
+            <td class="text-left px-2">{{data.id}}</td>
+            <td class="text-right px-2">{{data.amount}}</td>
+            <td class="text-right px-2">{{data.value}}</td>
           </tr>
         }
         @empty {
@@ -31,5 +31,4 @@
       </tbody>
     </table>
   </div>
-  
 </section>
