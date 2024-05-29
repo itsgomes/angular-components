@@ -3,4 +3,8 @@ export default class Utils {
     return Array.from({ length: size })
       .map((_) => "Item ");
   }
+
+  public static getRandomInteger = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 }

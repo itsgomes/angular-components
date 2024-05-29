@@ -45,6 +45,8 @@ export class ComponentsService {
         return await import('../components/toaster-example/toaster-example.component').then(component => component.ToasterExampleComponent);
       case ComponentsType.Modal: 
         return await import('../components/modal-example/modal-example.component').then(component => component.ModalExampleComponent);
+      case ComponentsType.RealtimeDataTable: 
+        return await import('../components/realtime-data-table/realtime-data-table.component').then(component => component.RealtimeDataTableComponent);
     }
   }
 }

@@ -1,5 +1,12 @@
 <footer class="flex flex-col items-center gap-4 py-8 px-4 sm:flex-row sm:gap-0 sm:justify-between">
-  <span class="font-mono font-medium">Designed and coded by Rafael Gomes</span>
+  <div class="font-mono font-medium flex flex-col gap-2">
+    <span>Designed and coded by Rafael Gomes.</span>
+    <span>All images by 
+      <a class="font-bold hover:text-[--primary-color] hover:scale-105 hover:underline hover:underline-offset-4"
+      href="https://gratisography.com/" 
+      target="_blank">gratisography</a>.
+    </span>
+  </div>
 
   <div class="flex gap-4">
     @for (media of socialMedias; track $index) {

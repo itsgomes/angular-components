@@ -16,7 +16,8 @@ export enum ComponentsType {
   RatingForm,
   LoadingState,
   Toaster,
-  Modal
+  Modal,
+  RealtimeDataTable
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -85,5 +86,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Modal service',
     description: 'Modal is a dialog that appears on front of your app content, and must be dismissed by the app before interaction.',
     image: '11.jpg',
+  },
+  {
+    id: ComponentsType.RealtimeDataTable,
+    title: 'Realtime Data Table',
+    description: 'Simulating communication with a websocket to fill a table with realtime data focusing on performance.',
+    image: '12.jpg',
   }
 ];
