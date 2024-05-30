@@ -14,39 +14,12 @@ npm install
 
 ## Usage
 
-![Project Image](/src/assets/images/readme.png)
-
 Navigate between components cards and feel free to open whatever component you desire to see their functions.
 
 Every card have a small description to guide your usage.
 
-## Available Components
+![Project Image](/src/assets/images/readme.png)
 
-Gallery slider using angular animations;
-
-Linear progress bar;
-
-Online checker using window event;
-
-Delayed input;
-
-Resizable element using observer;
-
-Infinite scroll with directive;
-
-Virtual scroll using angular material cdk;
-
-Custom Value Accessor component;
-
-Intercepting HTTP Request;
-
-Toaster Service;
-
-Modal Service;
-
-Realtime Datatable;
-
-Reactive Form using standart/custom validators;
 
 ## Contributing
 
