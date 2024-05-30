@@ -1,0 +1,48 @@
+<section class="w-full flex flex-col justify-center items-center gap-4 p-4">
+  <form class="w-full flex flex-col gap-4" [formGroup]="form">
+    <p class="font-medium">Create your account</p>
+
+    <div class="w-full flex flex-col">
+      <label for="account" class="font-medium">Account</label>
+      <input type="text" formControlName="account" id="account" name="account" class="text-black" />
+
+      @if (
+        form.controls['account'].invalid &&
+        (form.controls['account'].touched || form.controls['account'].dirty)
+      ) {
+        @if (form.controls['account'].errors?.['required']) {
+          <span class="text-red-500">First name is a required field.</span>
+        }
+        @else if (form.controls['account'].errors?.['minlength']) {
+          <span class="text-red-500">First name must be at least 5 characters.</span>
+        }
+        @else if (form.controls['account'].errors?.['forbiddenName']) {
+          <span class="text-red-500">This account name is not allowed.</span>
+        }
+      }
+    </div>
+
+    <div class="w-full flex flex-col">
+      <label for="password" class="font-medium">Password</label>
+      <input type="password" formControlName="password" id="password" name="password" class="text-black" />
+
+      @if (form.controls['password'].touched || form.controls['password'].dirty) {
+        @for (validator of availableValidators(); track $index) {
+          <ng-container [ngTemplateOutlet]="matchMessage" [ngTemplateOutletContext]="{ $implicit: validator.description, regex: validator.regex }"></ng-container>
+        }
+      }
+    </div>
+
+    <app-button title="Sign up" [disabled]="form.invalid" (onButtonClick)="submit()" />
+  </form>
+</section>
+
+<ng-template #matchMessage let-message let-regex="regex">
+  <span class="my-1" [ngClass]="
+    form.controls['password'].value?.match(regex) ? 
+    'text-green-500' : 
+    'text-red-500'"
+  >
+    {{message}}
+  </span>
+</ng-template>

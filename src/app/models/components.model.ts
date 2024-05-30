@@ -17,7 +17,8 @@ export enum ComponentsType {
   LoadingState,
   Toaster,
   Modal,
-  RealtimeDataTable
+  RealtimeDataTable,
+  ReactiveForm
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -92,5 +93,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Realtime Data Table',
     description: 'Simulating communication with a websocket to fill a table with realtime data focusing on performance.',
     image: '12.jpg',
+  },
+  {
+    id: ComponentsType.ReactiveForm,
+    title: 'Reactive Form using Validations',
+    description: 'Responsive and reactive form using standart and custom validations correctly without any additional libraries.',
+    image: '13.jpg',
   }
 ];
