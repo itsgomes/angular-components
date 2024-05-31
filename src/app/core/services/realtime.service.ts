@@ -1,7 +1,7 @@
 import { Injectable, Signal, WritableSignal, computed, signal } from "@angular/core";
 import { takeWhile, timer } from "rxjs";
 import Utils from "../../shared/utils/utils";
-import { DEFAULT_TEXT_COLOR_PRESET, RealtimeData, UPDATE_DELAY, lastAvailableColor } from "../models/realtime.model";
+import { DEFAULT_TEXT_COLOR_PRESET, MAX_VALUE, RealtimeData, UPDATE_DELAY, lastAvailableColor } from "../models/realtime.model";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { DEFAULT_TEXT_COLOR_PRESET, RealtimeData, UPDATE_DELAY, lastAvailableCol
 export class RealtimeService {
   private _data: WritableSignal<RealtimeData[]> = signal([]);
   private _streaming: WritableSignal<boolean> = signal(false);
-  private _startWithValue: number = 1000;
+  private _startWithValue: number = MAX_VALUE;
 
   public get data(): Signal<RealtimeData[]> {
     return computed(() => this._data());
@@ -47,18 +47,17 @@ export class RealtimeService {
 
   public clearData(): void {
     this._data.set([]);
-    this._startWithValue = 1000;
+    this._startWithValue = MAX_VALUE;
   }
 
   private appendNewData(): void {
     const newData: RealtimeData = {
       id: Utils.getRandomInteger(1, 100),
-      amount: Utils.getRandomInteger(100, 1000),
+      amount: Utils.getRandomInteger(100, 500),
       value: Utils.getRandomInteger(this._startWithValue - 1, this._startWithValue + 1)
     };
 
     this._data.update((oldValue: RealtimeData[]) => [newData, ...oldValue]);
     this._startWithValue--;
   }
-
 }

@@ -4,6 +4,7 @@ export type RealtimeData = {
   value: number;
 }
 
+export const MAX_VALUE: number = 1000;
 export const UPDATE_DELAY: number = 300;
 export const DEFAULT_TEXT_COLOR_PRESET = [
   'text-green-900',
