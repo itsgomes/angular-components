@@ -1,7 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, InputSignal, OutputEmitterRef, input, output } from "@angular/core";
-
-export type ButtonColor = 'primary' | 'success' | 'danger';
+import { ButtonColor } from "./button.model";
 
 @Component({
   selector: 'app-button',
@@ -12,8 +11,8 @@ export type ButtonColor = 'primary' | 'success' | 'danger';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
-  public readonly title: InputSignal<string> = input.required<string>();
-  public readonly buttonColor: InputSignal<ButtonColor> = input<ButtonColor>('primary');
-  public readonly disabled: InputSignal<boolean | undefined> = input<boolean>();
+  public title: InputSignal<string> = input.required<string>();
+  public disabled: InputSignal<boolean | undefined> = input<boolean>();
+  public buttonColor: InputSignal<ButtonColor> = input<ButtonColor>('primary');
   public onButtonClick: OutputEmitterRef<void> = output<void>();
 }

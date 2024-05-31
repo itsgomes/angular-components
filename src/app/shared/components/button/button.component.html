@@ -1,12 +1,10 @@
-<button 
-  type="button" 
-  class="w-full px-4 py-2 text-white font-medium rounded-md enabled:hover:opacity-75 disabled:bg-gray-400" 
+<button type="button" class="w-full px-4 py-2 text-white font-medium rounded-md enabled:hover:opacity-75 disabled:bg-gray-400" 
   [ngClass]="{ 
     'bg-[--primary-color]' : buttonColor() == 'primary', 
     'bg-green-700' : buttonColor() == 'success', 
     'bg-red-700' : buttonColor() == 'danger' 
   }"
-  [disabled]="disabled()"
+  [disabled]="disabled()" 
   (click)="onButtonClick.emit()">
   {{ title() }}
 </button>

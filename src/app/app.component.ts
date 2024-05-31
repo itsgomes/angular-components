@@ -8,14 +8,19 @@ import { ToasterComponent } from './shared/components/toaster/toaster.component'
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, HeaderComponent, ModalComponent, ToasterComponent],
+  imports: [
+    RouterOutlet, 
+    FooterComponent, 
+    HeaderComponent, 
+    ModalComponent, 
+    ToasterComponent
+  ],
   template: `
     <main class="container h-screen mx-auto">
       <app-header />
       <router-outlet />
       <app-footer />
     </main>
-
     <app-modal />
     <app-toaster />
   `,

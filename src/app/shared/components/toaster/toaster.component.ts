@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ToasterService } from '../../../services/toaster.service';
-import { ToastType } from '../../../models/toast.model';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ToastType } from '../../models/toast.model';
+import { ToasterService } from '../../services/toaster.service';
 
 @Component({
   selector: 'app-toaster',
@@ -12,7 +12,9 @@ import { ToastType } from '../../../models/toast.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToasterComponent {
-  protected get toastType(): typeof ToastType { return ToastType; }
+  protected get toastType(): typeof ToastType { 
+    return ToastType; 
+  }
 
   public constructor(protected toasterService: ToasterService) {}
 

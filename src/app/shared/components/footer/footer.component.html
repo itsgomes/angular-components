@@ -10,11 +10,15 @@
 
   <div class="flex gap-4">
     @for (media of socialMedias; track $index) {
-      <img src="/assets/svg/{{media.icon}}" 
-        class="hover:cursor-pointer hover:scale-105 hover-svg-color" 
-        [ngClass]="{ 'revert-svg-color' : themesService.isDarkTheme() }" 
-        (click)="openSocialMedia(media)"
-      >
+      <ng-container [ngTemplateOutlet]="mediaIcon" [ngTemplateOutletContext]="{ $implicit: media }"></ng-container>
     }
   </div>
 </footer>
+
+<ng-template #mediaIcon let-media>
+  <img src="/assets/svg/{{media.icon}}" 
+    class="hover:cursor-pointer hover:scale-105 hover-svg-color"
+    [ngClass]="{ 'revert-svg-color' : themeService.isDarkTheme }"
+    (click)="openSocialMedia(media)"
+  />
+</ng-template>

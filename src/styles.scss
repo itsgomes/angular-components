@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './app/scss/mixins.scss';
+@import './app/core/scss/mixins.scss';
 
 html {
   background: var(--background-color, #000000);

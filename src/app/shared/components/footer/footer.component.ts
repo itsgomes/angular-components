@@ -1,9 +1,9 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, HostBinding } from "@angular/core";
 import { takeUntilDestroyed, toObservable } from "@angular/core/rxjs-interop";
-import { SOCIAL_MEDIAS, SocialMedia, SocialMediaTypes } from "../../../models/footer.model";
-import { ComponentsService } from "../../../services/components.service";
-import { ThemesService } from "../../../services/themes.service";
+import { ComponentsService } from "../../../core/services/components.service";
+import { ThemeService } from "../../services/themes.service";
+import { SOCIAL_MEDIAS, SocialMedia, SocialMediaTypes } from "./footer.model";
 
 @Component({
   selector: 'app-footer',
@@ -17,11 +17,12 @@ export class FooterComponent {
   protected readonly socialMedias: SocialMedia[] = SOCIAL_MEDIAS;
 
   public constructor(
-    protected readonly componentsService: ComponentsService, 
-    protected readonly themesService: ThemesService
+    protected themeService: ThemeService,
+    private _componentsService: ComponentsService
   ) {
-    toObservable(this.componentsService.hasComponentsOpened)
-      .pipe(takeUntilDestroyed())
+    toObservable(this._componentsService.hasComponentsOpened)
+      .pipe(
+        takeUntilDestroyed())
       .subscribe((hasComponentsOpened: boolean) => { 
         this.fixed = hasComponentsOpened;
         this.bottom = hasComponentsOpened;

@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Signal, ViewContainerRef, viewChild } from "@angular/core";
 import { takeUntilDestroyed, toObservable } from "@angular/core/rxjs-interop";
 import { delay, filter } from "rxjs";
-import { Modal } from "../../../models/modal.model";
-import { ModalService } from "../../../services/modal.service";
+import { Modal } from "../../models/modal.model";
+import { ModalService } from "../../services/modal.service";
 import { ButtonComponent } from "../button/button.component";
 
 @Component({
@@ -17,31 +17,30 @@ export class ModalComponent {
   protected vcr: Signal<ViewContainerRef> = viewChild.required('vcr', { read: ViewContainerRef });
   protected container: Signal<ElementRef> = viewChild.required('modalContainer', { read: ElementRef });
 
-  public constructor(protected readonly modalService: ModalService) {
+  public constructor(protected modalService: ModalService) {
     toObservable(this.modalService.modal)
       .pipe(
         filter(Boolean), 
         delay(50),
-        takeUntilDestroyed()
-      ).subscribe((modal: Modal | undefined) => {
-        if (modal !== undefined) this.attachContent(modal);
-      });
+        takeUntilDestroyed())
+      .subscribe((modal: Modal) => this.attachContent(modal));
+  }
+
+  private attachContent(modal: Modal): void {
+    if (this.vcr.length > 0) 
+      return;
+
+    const componentRef = this.vcr().createComponent(modal.componentRef);
+    componentRef.changeDetectorRef.detectChanges();
   }
 
   protected close(): void {
     this.modalService.close();
   }
 
-  private attachContent(modal: Modal): void {
-    if (this.vcr.length > 0) return;
-
-    const componentRef = this.vcr().createComponent(modal.componentRef);
-    componentRef.changeDetectorRef.detectChanges();
-  }
-
   @HostListener('document:click', ['$event'])
-  checkClickOutside(event: any) {
-    if (!this.modalService.modal()) return;
-    if (!this.container()?.nativeElement.contains(event.target)) this.close();
+  protected checkClickOutside(event: any): void {
+    if (this.modalService.modal() && !this.container()?.nativeElement.contains(event.target))
+      this.close();
   }
 }

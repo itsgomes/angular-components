@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
-import { Components } from '../../../models/components.model';
+import { Components } from '../../../core/models/components.model';
 
 @Component({
   selector: 'app-card-component',
