@@ -1,5 +1,5 @@
 <section class="flex flex-col justify-center items-center gap-4 p-4">
-  <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
     <app-button title="Start stream" [disabled]="realtimeService.isStreaming" (onButtonClick)="startStreamData()" />
     <app-button title="Stop stream" [disabled]="!realtimeService.isStreaming" (onButtonClick)="stopStreamData()" />
     <app-button title="Clear dataset" [disabled]="realtimeService.isStreaming" (onButtonClick)="clearData()" />
@@ -13,9 +13,11 @@
         <tr class="bg-gray-500 sticky top-0">
           <th class="text-left px-2">ID</th>
           <th class="text-right px-2">Amount</th>
+
           @if (showAccumulated()) {
             <th class="text-right px-2">Accumulated</th>
           }
+
           <th class="text-right px-2">Value</th>
         </tr>
       </thead>
@@ -25,15 +27,18 @@
           <tr>
             <td class="text-left px-2">{{data.id}}</td>
             <td class="text-right px-2">{{data.amount}}</td>
+
             @if (showAccumulated()) {
               <td class="text-right px-2">{{accumulatedValues()[$index]}}</td>
             }
+
             @if (colorize()) {
               <td class="font-medium text-right px-2" colorize>{{data.value}}</td>
             }
             @else {
               <td class="font-medium text-right px-2">{{data.value}}</td>
             }
+
           </tr>
         }
         @empty {
