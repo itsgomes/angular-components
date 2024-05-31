@@ -1,8 +1,9 @@
 <section class="flex flex-col justify-center items-center gap-4 p-4">
-  <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     <app-button title="Start stream" [disabled]="realtimeService.isStreaming()" (onButtonClick)="startStreamData()" />
     <app-button title="Stop stream" [disabled]="!realtimeService.isStreaming()" (onButtonClick)="stopStreamData()" />
     <app-button title="Clear dataset" [disabled]="realtimeService.isStreaming()" (onButtonClick)="clearData()" />
+    <app-button [title]="colorize() ? 'Disable colorize' : 'Enable colorize'" (onButtonClick)="toggleColorize()" />
   </div>
 
   <div class="w-full max-h-[50vh] overflow-auto border">
@@ -16,11 +17,16 @@
       </thead>
   
       <tbody>
-        @for (data of dataset(); track $index; let odd = $odd) {
-          <tr [ngClass]="{ 'text-[--primary-color]' : odd }">
+        @for (data of dataset(); track $index) {
+          <tr>
             <td class="text-left px-2">{{data.id}}</td>
             <td class="text-right px-2">{{data.amount}}</td>
-            <td class="text-right px-2">{{data.value}}</td>
+            @if (colorize()) {
+              <td class="font-medium text-right px-2" colorize>{{data.value}}</td>
+            }
+            @else {
+              <td class="font-medium text-right px-2">{{data.value}}</td>
+            }
           </tr>
         }
         @empty {
