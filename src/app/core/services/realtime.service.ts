@@ -35,8 +35,7 @@ export class RealtimeService {
     this._streaming.set(true);
     
     timer(0, UPDATE_DELAY)
-      .pipe(
-        takeWhile(() => this._streaming()))
+      .pipe(takeWhile(() => this._streaming()))
       .subscribe(() => this.appendNewData());
   }
 
@@ -51,13 +50,15 @@ export class RealtimeService {
   }
 
   private appendNewData(): void {
-    const newData: RealtimeData = {
+    this._data.update((oldValue: RealtimeData[]) => [this.generateRandomData(), ...oldValue]);
+    this._startWithValue--;
+  }
+
+  private generateRandomData(): RealtimeData {
+    return {
       id: Utils.getRandomInteger(1, 100),
       amount: Utils.getRandomInteger(100, 500),
       value: Utils.getRandomInteger(this._startWithValue - 1, this._startWithValue + 1)
     };
-
-    this._data.update((oldValue: RealtimeData[]) => [newData, ...oldValue]);
-    this._startWithValue--;
   }
 }
