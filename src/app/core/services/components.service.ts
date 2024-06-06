@@ -38,8 +38,8 @@ export class ComponentsService {
         return await import('../components/virtual-scroll/virtual-scroll.component').then(component => component.VirtualScrollComponent);
       case ComponentsType.RatingForm: 
         return await import('../components/rating-form/rating-form.component').then(component => component.RatingFormComponent);
-      case ComponentsType.LoadingState: 
-        return await import('../components/loading-example/loading-example.component').then(component => component.LoadingExampleComponent);
+      case ComponentsType.HttpRequest: 
+        return await import('../components/http-request-example/http-request-example.component').then(component => component.HttpRequestExampleComponent);
       case ComponentsType.Toaster: 
         return await import('../components/toaster-example/toaster-example.component').then(component => component.ToasterExampleComponent);
       case ComponentsType.Modal: 

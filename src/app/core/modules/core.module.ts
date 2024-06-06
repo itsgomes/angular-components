@@ -1,14 +1,14 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { LoadingInterceptor } from './loading.interceptor';
+import { HttpRequestInterceptor } from '../interceptors/http-request.interceptor';
 
 @NgModule({
   providers: [
     { 
       provide: HTTP_INTERCEPTORS, 
-      useClass: LoadingInterceptor, 
+      useClass: HttpRequestInterceptor, 
       multi: true 
     }
   ]
 })
-export class InterceptorModule {}
+export class CoreModule {}

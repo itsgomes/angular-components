@@ -14,7 +14,7 @@ export enum ComponentsType {
   InfiniteScroll,
   VirtualScroll,
   RatingForm,
-  LoadingState,
+  HttpRequest,
   Toaster,
   Modal,
   RealtimeDataTable,
@@ -71,7 +71,7 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     image: '8.jpg',
   },
   {
-    id: ComponentsType.LoadingState,
+    id: ComponentsType.HttpRequest,
     title: 'Intercepting HTTP Request',
     description: 'A simple way to intercept http request and communicate to service for show loading state.',
     image: '9.jpg',

@@ -3,7 +3,7 @@ import { ApplicationConfig, importProvidersFrom, provideExperimentalZonelessChan
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-import { InterceptorModule } from './core/interceptors/interceptor.module';
+import { CoreModule } from './core/modules/core.module';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -11,6 +11,6 @@ export const appConfig: ApplicationConfig = {
     provideExperimentalZonelessChangeDetection(),
     provideHttpClient(withInterceptorsFromDi()),
     provideRouter(routes),
-    importProvidersFrom(InterceptorModule)
+    importProvidersFrom(CoreModule)
   ]
 };

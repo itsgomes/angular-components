@@ -5,13 +5,13 @@ import { HTTP_STATUS_SLEEP_TIME, HttpStatusRequest } from '../../models/http-sta
 import { HttpStatusApiService } from '../../services/http-status-api.service';
 
 @Component({
-  selector: 'app-loading-component',
+  selector: 'app-http-request-example',
   standalone: true,
   imports: [ButtonComponent],
-  templateUrl: './loading-example.component.html',
+  templateUrl: './http-request-example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoadingExampleComponent {
+export class HttpRequestExampleComponent {
   public constructor(
     private _httpStatusApiService: HttpStatusApiService,
     protected loadingService: LoadingService
