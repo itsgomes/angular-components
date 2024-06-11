@@ -18,7 +18,8 @@ export enum ComponentsType {
   Toaster,
   Modal,
   RealtimeDataTable,
-  ReactiveForm
+  ReactiveForm,
+  Chart
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -99,5 +100,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Reactive Form using Validations',
     description: 'Responsive and reactive form using standart and custom validations correctly without any additional libraries.',
     image: '13.jpg',
+  },
+  {
+    id: ComponentsType.Chart,
+    title: 'Chart using chart.js',
+    description: 'Using a flexible JavaScript charting library to create analytics charts.',
+    image: '14.jpg',
   }
 ];
