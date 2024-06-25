@@ -26,4 +26,8 @@ export class HttpRequestExampleComponent {
     this._httpStatusApiService.getHttpStatus(request)
       .subscribe();
   }
+
+  protected forceError(): void {
+    throw 'An unhandled error has occurred.';
+  }
 }
