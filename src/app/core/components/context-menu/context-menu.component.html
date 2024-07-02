@@ -1,0 +1,12 @@
+@if (items().length && show) {
+  <div class="fixed flex flex-col bg-[--background-color] text-[--text-color] border" 
+    [style.top.px]="position()?.top" 
+    [style.left.px]="position()?.left"
+    (contextmenu)="handleContextMenu($event)">
+
+    @for (item of items(); track $index) {
+      <button type="button" class="hover:bg-[--primary-color] p-4" (click)="executeFn(item.commandType)">{{item.name}}</button>
+    }
+
+  </div>
+}

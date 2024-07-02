@@ -1,0 +1,28 @@
+<section class="max-h-[50vh] overflow-auto border" (contextmenu)="handleContextMenu($event)">
+  <table class="w-full">
+    <thead>
+      <tr class="bg-gray-500 sticky top-0">
+        @for (field of fields; track $index) {
+          <th class="capitalize text-left px-2">{{field}}</th>
+        }
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (product of (products$ | async); track $index) {
+        <tr>
+          @for (field of fields; track $index) {
+            <td class="text-left px-2">{{getFieldValue(product, field)}}</td>
+          }
+        </tr>
+      }
+      @empty {
+        <tr>
+          <td class="text-center font-medium p-3" colspan="5">Nenhum produto foi encontrado.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>
+
+<context-menu [items]="contextMenuItems" #contextMenu></context-menu>

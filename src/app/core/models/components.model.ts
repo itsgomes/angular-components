@@ -19,7 +19,8 @@ export enum ComponentsType {
   Modal,
   RealtimeDataTable,
   ReactiveForm,
-  Chart
+  Chart,
+  ContextMenu
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -106,5 +107,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Chart using chart.js',
     description: 'Using a flexible JavaScript charting library to create analytics charts.',
     image: '14.jpg',
+  },
+  {
+    id: ComponentsType.ContextMenu,
+    title: 'Custom context menu',
+    description: 'Steps to create your own custom and reusable context menu directive.',
+    image: '15.jpg',
   }
 ];

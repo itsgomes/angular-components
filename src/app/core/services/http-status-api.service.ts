@@ -7,9 +7,9 @@ import { HTTP_STATUS_API_URL, HttpStatusRequest } from '../models/http-status-ap
   providedIn: 'root'
 })
 export class HttpStatusApiService {
-  public constructor(private http: HttpClient) {}
+  public constructor(private _http: HttpClient) {}
 
   public getHttpStatus(request: HttpStatusRequest): Observable<string> {
-    return this.http.get<string>(`${HTTP_STATUS_API_URL}${request.code.toString()}?sleep=${request.sleep.toString()}`);
+    return this._http.get<string>(`${HTTP_STATUS_API_URL}${request.code.toString()}?sleep=${request.sleep.toString()}`);
   }
 }

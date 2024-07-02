@@ -50,6 +50,8 @@ export class ComponentsService {
         return await import('../components/reactive-form/reactive-form.component').then(component => component.ReactiveFormComponent);
       case ComponentsType.Chart: 
         return await import('../components/chart/chart.component').then(component => component.ChartComponent);
+      case ComponentsType.ContextMenu: 
+        return await import('../components/context-menu/context-menu-container.component').then(component => component.ContextMenuContainerComponent);
     }
   }
 }
