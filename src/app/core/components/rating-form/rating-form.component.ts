@@ -14,7 +14,7 @@ import { FormResponse } from './rating.model';
     ButtonComponent, 
     RatingComponent
   ],
-  templateUrl: './rating-form.component.html',
+  templateUrl: 'rating-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RatingFormComponent {

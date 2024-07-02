@@ -7,7 +7,7 @@ import { ToasterService } from '../../services/toaster.service';
   selector: 'app-toaster',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './toaster.component.html',
+  templateUrl: 'toaster.component.html',
   styles: `.translate-50 { transform: translate(-50%, 0px) }`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

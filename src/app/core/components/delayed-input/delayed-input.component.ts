@@ -7,7 +7,7 @@ import { debounceTime, distinctUntilChanged, filter } from 'rxjs';
   selector: 'app-delayed-input',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './delayed-input.component.html',
+  templateUrl: 'delayed-input.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DelayedInputComponent {

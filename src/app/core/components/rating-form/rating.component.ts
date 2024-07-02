@@ -14,7 +14,7 @@ import { Rating, RATINGS } from './rating.model';
       multi: true
     }
   ],
-  templateUrl: './rating.component.html',
+  templateUrl: 'rating.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RatingComponent implements ControlValueAccessor {

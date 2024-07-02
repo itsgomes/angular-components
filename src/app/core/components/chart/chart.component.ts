@@ -4,7 +4,7 @@ import Chart from 'chart.js/auto';
 @Component({
   selector: 'app-chart',
   standalone: true,
-  templateUrl: './chart.component.html',
+  templateUrl: 'chart.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChartComponent {

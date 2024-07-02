@@ -4,7 +4,7 @@ import { Components } from '../../../core/models/components.model';
 @Component({
   selector: 'app-card-component',
   standalone: true,
-  templateUrl: './card.component.html',
+  templateUrl: 'card.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {

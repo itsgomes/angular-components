@@ -6,7 +6,7 @@ import { ButtonColor } from "./button.model";
   selector: 'app-button',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './button.component.html',
+  templateUrl: 'button.component.html',
   host: { 'class': 'flex-1' },
   changeDetection: ChangeDetectionStrategy.OnPush
 })

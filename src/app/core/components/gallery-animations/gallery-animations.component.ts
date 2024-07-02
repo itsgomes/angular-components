@@ -10,7 +10,7 @@ import { ButtonComponent } from '../../../shared/components/button/button.compon
     CommonModule, 
     ButtonComponent
   ],
-  templateUrl: './gallery-animations.component.html',
+  templateUrl: 'gallery-animations.component.html',
   animations: [
     trigger('slide', [
       transition('* => *', [

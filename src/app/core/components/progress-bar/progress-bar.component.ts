@@ -11,7 +11,7 @@ import { ButtonComponent } from '../../../shared/components/button/button.compon
     FormsModule, 
     ButtonComponent
   ],
-  templateUrl: './progress-bar.component.html',
+  templateUrl: 'progress-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProgressBarComponent {

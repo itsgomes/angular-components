@@ -15,7 +15,7 @@ import { forbiddenNameValidator } from "./reactive-form.validators";
     ReactiveFormsModule, 
     ButtonComponent
   ],
-  templateUrl: './reactive-form.component.html',
+  templateUrl: 'reactive-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ReactiveFormComponent {

@@ -10,7 +10,7 @@ import Utils from '../../../shared/utils/utils';
     CommonModule, 
     ScrollingModule
   ],
-  templateUrl: './virtual-scroll.component.html',
+  templateUrl: 'virtual-scroll.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VirtualScrollComponent {

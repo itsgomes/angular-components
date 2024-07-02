@@ -7,7 +7,7 @@ import { ModalService } from "../../../shared/services/modal.service";
   selector: 'app-modal-component',
   standalone: true,
   imports: [ButtonComponent],
-  templateUrl: './modal-example.component.html',
+  templateUrl: 'modal-example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ModalExampleComponent {

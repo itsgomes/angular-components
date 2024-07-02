@@ -9,7 +9,7 @@ import { ButtonComponent } from "../button/button.component";
   selector: 'app-modal',
   standalone: true,
   imports: [ButtonComponent],
-  templateUrl: './modal.component.html',
+  templateUrl: 'modal.component.html',
   styles: `.transform-50 { transform: translate(-50%, -50%) }`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

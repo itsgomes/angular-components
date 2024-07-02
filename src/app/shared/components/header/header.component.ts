@@ -5,7 +5,7 @@ import { ThemeButtonComponent } from '../theme-button/theme-button.component';
   selector: 'app-header',
   standalone: true,
   imports: [ThemeButtonComponent],
-  templateUrl: './header.component.html',
+  templateUrl: 'header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {}

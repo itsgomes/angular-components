@@ -13,7 +13,7 @@ import { RealtimeService } from "../../services/realtime.service";
     ButtonComponent, 
     ColorizeDirective
   ],
-  templateUrl: './realtime-data-table.component.html',
+  templateUrl: 'realtime-data-table.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RealtimeDataTableComponent implements OnDestroy {

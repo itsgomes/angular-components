@@ -8,7 +8,7 @@ import { ComponentsService } from '../../services/components.service';
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, CardComponent],
-  templateUrl: './home.page.html',
+  templateUrl: 'home.page.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePage {

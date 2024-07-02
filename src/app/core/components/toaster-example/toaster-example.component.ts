@@ -7,7 +7,7 @@ import { ToasterService } from "../../../shared/services/toaster.service";
   selector: 'app-toaster-component',
   standalone: true,
   imports: [ButtonComponent],
-  templateUrl: './toaster-example.component.html',
+  templateUrl: 'toaster-example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToasterExampleComponent {

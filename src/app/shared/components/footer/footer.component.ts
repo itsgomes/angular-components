@@ -9,7 +9,7 @@ import { SOCIAL_MEDIAS, SocialMedia, SocialMediaTypes } from "./footer.model";
   selector: 'app-footer',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './footer.component.html',
+  templateUrl: 'footer.component.html',
   host: { 'class' : 'container' },
   changeDetection: ChangeDetectionStrategy.OnPush
 })

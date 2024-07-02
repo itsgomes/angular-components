@@ -8,7 +8,7 @@ import { HttpStatusApiService } from '../../services/http-status-api.service';
   selector: 'app-http-request-example',
   standalone: true,
   imports: [ButtonComponent],
-  templateUrl: './http-request-example.component.html',
+  templateUrl: 'http-request-example.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HttpRequestExampleComponent {

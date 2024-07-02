@@ -10,7 +10,7 @@ import { InfiniteScrollDirective } from '../../directives/infinite-scroll.direct
     CommonModule, 
     InfiniteScrollDirective
   ],
-  templateUrl: './infinite-scroll.component.html',
+  templateUrl: 'infinite-scroll.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfiniteScrollComponent {
