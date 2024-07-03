@@ -7,5 +7,4 @@ export type DummyProduct = {
   rating: number;
 }
 
-export const DUMMY_API_URL: string = 'https://dummyjson.com/';
 export const PRODUCT_API_FIELDS: string[] = ['title', 'description', 'category', 'price', 'rating'];
