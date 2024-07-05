@@ -1,10 +1,10 @@
-<div class="w-full inline-flex h-52 sm:h-56 border border-[--border-color]">
+<div class="w-full h-52 inline-flex border border-[--color-border] sm:h-56">
   <img class="w-40 object-cover hidden sm:block" [src]="'/assets/images/' + component().image" />
   
   <div class="flex-1 flex flex-col p-3">
     <h1 class="text-xl text-justify font-bold line-clamp-2">{{ component().title }}</h1>
-    <p class="text-justify text-[--text-secondary-color] line-clamp-4 my-2">{{ component().description }}</p>
-    <button type="button" class="self-end font-semibold rounded-sm text-[--primary-color] hover:text-[--hover-color] hover:underline hover:underline-offset-4 mt-auto" (click)="onOpenComponent.emit(component())">
+    <p class="text-justify text-[--color-text-light] line-clamp-4 my-2">{{ component().description }}</p>
+    <button type="button" class="self-end font-semibold rounded-sm text-[--color-primary] hover:text-[--color-primary-light] hover:underline hover:underline-offset-4 mt-auto" (click)="onOpenComponent.emit(component())">
       Show component
     </button>
   </div>

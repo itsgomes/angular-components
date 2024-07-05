@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { ButtonComponent } from "../../../shared/components/button/button.component";
-import { Modal } from "../../../shared/models/modal.model";
+import { Modal } from "../../../shared/components/modal/modal.model";
 import { ModalService } from "../../../shared/services/modal.service";
 
 @Component({

@@ -1,0 +1,29 @@
+@mixin dark-mode() {
+  --color-background: hsl(240, 61%, 7%);
+  --color-background-light: hsl(240, 39%, 14%);
+  --color-text: hsl(240, 10%, 90%);
+  --color-text-light: hsl(240, 10%, 80%);
+  
+  @include commons();
+}
+
+@mixin light-mode() {
+  --color-background: (0, 0%, 97%);
+  --color-background-light: (0, 0%, 87%);
+  --color-text: hsl(0, 0%, 20%);
+  --color-text-light: hsl(0, 0%, 30%);
+
+  @include commons();
+}
+
+@mixin commons() {
+  --color-primary: hsl(217, 98%, 66%);
+  --color-primary-light: hsl(217, 98%, 77%);
+  --color-success: hsl(144, 100%, 39%);
+  --color-warning: hsl(29, 91%, 53%);
+  --color-caution: hsl(0, 98%, 64%);
+  --color-border: hsl(235, 25%, 27%);
+  --color-border-light: hsl(235, 15%, 41%);
+  --color-scrollbar-knob: hsl(240, 35%, 17%);
+  --color-scrollbar-knob-active: hsl(240, 30%, 23%);
+}

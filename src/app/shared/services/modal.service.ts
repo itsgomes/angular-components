@@ -1,5 +1,5 @@
 import { Injectable, Signal, WritableSignal, computed, signal } from "@angular/core";
-import { Modal } from "../models/modal.model";
+import { Modal } from "../components/modal/modal.model";
 
 @Injectable({
   providedIn: 'root'

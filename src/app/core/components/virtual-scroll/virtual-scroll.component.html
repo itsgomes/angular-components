@@ -10,7 +10,7 @@
   <cdk-virtual-scroll-viewport itemSize="40" class="w-full max-w-80 h-80 flex flex-col overflow-auto border">
     <div *cdkVirtualFor="let item of array(); let $index = index; let even = even" 
       class="block cursor-default p-2" 
-      [ngClass]="{ 'text-[--primary-color]' : even }"
+      [ngClass]="{ 'text-[--color-primary]' : even }"
     >
       {{item + $index}}
     </div>

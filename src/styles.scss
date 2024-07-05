@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './app/core/scss/mixins.scss';
+@import './scss/variables.scss';
+@import './scss/fonts.scss';
 
 html {
-  background: var(--background-color, #000000);
-  color: var(--text-color, #F3F3F3);
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: 100%;
+  font-family: 'Inter', Helvetica, sans-serif;
+
   
-  @include commons();
 }
 
 html.dark {
@@ -19,10 +22,23 @@ html.light {
   @include light-mode();
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--color-scrollbar-knob); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-knob-active); 
+}
+
 .revert-svg-color { 
   filter: invert(100%); 
 }
 
 .hover-svg-color:hover { 
-  filter: brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(3639%) hue-rotate(245deg) brightness(83%) contrast(90%); 
+  filter: invert(45%) sepia(88%) saturate(465%) hue-rotate(182deg) brightness(105%) contrast(98%);
 }

@@ -4,8 +4,6 @@ import { Injectable } from "@angular/core";
   providedIn: 'root'
 })
 export class LocalStorageService {
-  public constructor() {}
-
   public setItem(key: string, value: string): void {
     localStorage.setItem(key, value);
   }

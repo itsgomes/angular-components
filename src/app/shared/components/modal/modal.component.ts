@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Signal, ViewContainerRef, viewChild } from "@angular/core";
 import { takeUntilDestroyed, toObservable } from "@angular/core/rxjs-interop";
 import { delay, filter } from "rxjs";
-import { Modal } from "../../models/modal.model";
 import { ModalService } from "../../services/modal.service";
 import { ButtonComponent } from "../button/button.component";
+import { Modal } from "./modal.model";
 
 @Component({
   selector: 'app-modal',

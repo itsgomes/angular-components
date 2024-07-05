@@ -1,10 +1,10 @@
 <div class="w-80 flex flex-col fixed bottom-0 left-1/2 translate-50 gap-4 mb-6">
   @for (toast of toasterService.toast(); track $index) {
     <div class="flex justify-between rounded gap-2 px-4 py-2 z-50 drop-shadow-md" [ngClass]="{ 
-        'bg-[--primary-color]' : toast.type == toastType.Primary, 
-        'bg-green-700' : toast.type == toastType.Success,
-        'bg-red-700': toast.type == toastType.Error,
-        'bg-yellow-700': toast.type == toastType.Warn 
+        'bg-[--color-primary]' : toast.type == toastType.Primary, 
+        'bg-[--color-success]' : toast.type == toastType.Success,
+        'bg-[--color-caution]': toast.type == toastType.Error,
+        'bg-[--color-warning]': toast.type == toastType.Warn 
     }">
       <span class="flex-1 text-white truncate">{{toast.message}}</span>
 
