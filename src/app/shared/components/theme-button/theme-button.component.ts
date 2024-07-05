@@ -8,6 +8,7 @@ import { ThemeService } from '../../services/themes.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: 'theme-button.component.html',
+  host: { 'class': 'flex' },
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeButtonComponent {

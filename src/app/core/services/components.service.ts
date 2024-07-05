@@ -7,9 +7,14 @@ import { AVAILABLE_COMPONENTS, Components, ComponentsType } from '../models/comp
 })
 export class ComponentsService {
   private _hasComponentsOpened: WritableSignal<boolean> = signal(false);
+  private _query: WritableSignal<string> = signal('');
 
   public get hasComponentsOpened(): Signal<boolean> {
     return computed(() => this._hasComponentsOpened());
+  }
+
+  public get query(): Signal<string> {
+    return computed(() => this._query());
   }
 
   public set hasComponentsOpened(value: boolean) {
@@ -53,5 +58,9 @@ export class ComponentsService {
       case ComponentsType.ContextMenu: 
         return await import('../components/context-menu/context-menu-container.component').then(component => component.ContextMenuContainerComponent);
     }
+  }
+
+  public queryComponents(query: string): void {
+    this._query.set(query);
   }
 }

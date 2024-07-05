@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Signal, viewChild, ViewContainerRef } from '@angular/core';
 import { CardComponent } from '../../../shared/components/card/card.component';
 import { Components } from '../../models/components.model';
+import { FilterComponentsPipe } from '../../pipes/filter-components.pipe';
 import { ComponentsService } from '../../services/components.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, CardComponent, FilterComponentsPipe],
   templateUrl: 'home.page.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

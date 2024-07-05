@@ -8,8 +8,8 @@
 }
 
 @mixin light-mode() {
-  --color-background: (0, 0%, 97%);
-  --color-background-light: (0, 0%, 87%);
+  --color-background: hsl(0, 0%, 97%);
+  --color-background-light: hsl(0, 0%, 94%);
   --color-text: hsl(0, 0%, 20%);
   --color-text-light: hsl(0, 0%, 30%);
 
