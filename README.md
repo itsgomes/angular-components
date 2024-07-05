@@ -6,7 +6,9 @@ An angular project for study purposes.
 
 Navigate between components cards and feel free to open whatever component you desire to see their functions.
 
-![Project Image](/src/assets/images/readme.png)
+![Project image with dark mode](/src/assets/images/readme.png)
+
+![Project image with light mode](/src/assets/images/readme2.png)
 
 ## Contributing
 
