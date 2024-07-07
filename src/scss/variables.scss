@@ -1,6 +1,7 @@
 @mixin dark-mode() {
   --color-background: hsl(240, 61%, 7%);
   --color-background-light: hsl(240, 39%, 14%);
+  --color-background-lighter: hsl(240, 17%, 21%);
   --color-text: hsl(240, 10%, 90%);
   --color-text-light: hsl(240, 10%, 80%);
   
@@ -10,6 +11,7 @@
 @mixin light-mode() {
   --color-background: hsl(0, 0%, 97%);
   --color-background-light: hsl(0, 0%, 94%);
+  --color-background-lighter: hsl(0, 0%, 91%);
   --color-text: hsl(0, 0%, 20%);
   --color-text-light: hsl(0, 0%, 30%);
 

@@ -10,7 +10,7 @@
   <div class="w-full max-h-[50vh] overflow-auto border">
     <table class="w-full table-auto">
       <thead>
-        <tr class="bg-gray-500 sticky top-0">
+        <tr class="bg-[--color-background-light] sticky top-0">
           <th class="text-left px-2">ID</th>
           <th class="text-right px-2">Amount</th>
 
@@ -23,8 +23,8 @@
       </thead>
   
       <tbody>
-        @for (data of dataset(); track $index) {
-          <tr>
+        @for (data of dataset(); track $index; let odd = $odd) {
+          <tr [ngClass]="{ 'bg-[--color-background-lighter]' : odd }">
             <td class="text-left px-2">{{data.id}}</td>
             <td class="text-right px-2">{{data.amount}}</td>
 
