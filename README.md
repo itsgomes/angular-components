@@ -1,5 +1,7 @@
 ## Angular Components
-An angular project for study purposes. You can access the application at this [link](angular-components-lilac.vercel.app).
+An angular project for study purposes.
+
+You can access the application at this [link](angular-components-lilac.vercel.app).
 
 
 ## Prerequisites
@@ -11,17 +13,17 @@ An angular project for study purposes. You can access the application at this [l
 ## How to run the application
 To run this project locally in your development environment, follow these steps:
 
-1. Clone the repo:
+Clone the repo:
   ```bash
   git clone https://github.com/itsgomes/angular-components
   ```
 
-2. Install the dependencies:
+Install the dependencies:
   ```bash
   npm install
   ```
     
-3. Start the development server:
+Start the development server:
   ```bash
   ng serve
   ```
@@ -39,9 +41,11 @@ Navigate between components cards and feel free to open whatever component you d
 ## Dependencies
 
 [Angular](https://angular.dev/)
+
 [TailwindCSS](https://tailwindcss.com/docs)
+
 [Chart.js](https://www.chartjs.org/)
 
 
-## Autor
+## Author
 [Rafael Gomes](https://www.linkedin.com/in/rafael-gomes-21493a119/)
