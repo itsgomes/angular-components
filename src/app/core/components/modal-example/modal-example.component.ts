@@ -4,7 +4,7 @@ import { Modal } from "../../../shared/components/modal/modal.model";
 import { ModalService } from "../../../shared/services/modal.service";
 
 @Component({
-  selector: 'app-modal-component',
+  selector: 'app-modal-example',
   standalone: true,
   imports: [ButtonComponent],
   templateUrl: 'modal-example.component.html',

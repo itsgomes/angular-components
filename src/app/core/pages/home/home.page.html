@@ -1,12 +1,73 @@
-@if (componentsService.hasComponentsOpened()) {
+@if (componentsService.currentComponent()) {
   <div class="flex flex-col w-full">
-    <ng-container #vcr></ng-container>
-    <button class="mt-10 mx-auto font-semibold rounded-sm text-[--color-primary] hover:text-[--color-primary-light] hover:underline hover:underline-offset-4" type="button" (click)="back()">Back to components page</button>
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.GalleryAnimations) {
+      <app-gallery-animations />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ProgressBar) {
+      <app-progress-bar />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.OnlineChecker) {
+      <app-online-checker />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.DelayedInput) {
+      <app-delayed-input />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ResizableElement) {
+      <app-resizable-element />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.InfiniteScroll) {
+      <app-infinite-scroll />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.VirtualScroll) {
+      <app-virtual-scroll />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.RatingForm) {
+      <app-rating-form />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.HttpRequest) {
+      <app-http-request-example />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.Toaster) {
+      <app-toaster-example />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.Modal) {
+      <app-modal-example />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.RealtimeDataTable) {
+      <app-realtime-data-table />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ReactiveForm) {
+      <app-reactive-form />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.Chart) {
+      <app-chart />
+    }
+
+    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ContextMenu) {
+      <app-context-menu-container />
+    }
+
+    <ng-container [ngTemplateOutlet]="backButtonTpl"></ng-container>
   </div>
+
 }
 @else {
   <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4">
-    @for (component of (componentsService.getComponents() | async) | filterComponents: componentsService.query(); track $index) {
+    @for (component of (componentsService.components | async) | filterComponents: componentsService.query(); track $index) {
       <app-card-component [component]="component" (onOpenComponent)="openComponent($event)" />
     }
     @empty {
@@ -14,3 +75,7 @@
     }
   </div>
 }
+
+<ng-template #backButtonTpl>
+  <button class="mt-10 mx-auto font-semibold rounded-sm text-[--color-primary] hover:text-[--color-primary-light] hover:underline hover:underline-offset-4" type="button" (click)="back()">Back to components page</button>
+</ng-template>

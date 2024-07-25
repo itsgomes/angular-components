@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, HostBinding } from "@angular/core";
 import { takeUntilDestroyed, toObservable } from "@angular/core/rxjs-interop";
+import { Components } from "../../../core/models/components.model";
 import { ComponentsService } from "../../../core/services/components.service";
 import { ThemeService } from "../../services/themes.service";
 import { SOCIAL_MEDIAS, SocialMedia, SocialMediaTypes } from "./footer.model";
@@ -20,12 +21,12 @@ export class FooterComponent {
     protected themeService: ThemeService,
     private _componentsService: ComponentsService
   ) {
-    toObservable(this._componentsService.hasComponentsOpened)
+    toObservable(this._componentsService.currentComponent)
       .pipe(
         takeUntilDestroyed())
-      .subscribe((hasComponentsOpened: boolean) => { 
-        this.fixed = hasComponentsOpened;
-        this.bottom = hasComponentsOpened;
+      .subscribe((currentComponent: Components | null) => {
+          this.fixed = Boolean(currentComponent);
+          this.bottom = Boolean(currentComponent);
       });
   }
 

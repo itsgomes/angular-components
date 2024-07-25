@@ -4,7 +4,7 @@ import { TOAST_EXAMPLE_ARRAY, Toast } from "../../../shared/models/toast.model";
 import { ToasterService } from "../../../shared/services/toaster.service";
 
 @Component({
-  selector: 'app-toaster-component',
+  selector: 'app-toaster-example',
   standalone: true,
   imports: [ButtonComponent],
   templateUrl: 'toaster-example.component.html',

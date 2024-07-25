@@ -7,7 +7,7 @@ import { ContextMenuComponent } from "./context-menu.component";
 import { CONTEXT_MENU_ITEMS, ContextMenuItem, ContextMenuPosition } from "./context-menu.model";
 
 @Component({
-  selector: 'context-menu-container',
+  selector: 'app-context-menu-container',
   standalone: true,
   imports: [
     CommonModule,
