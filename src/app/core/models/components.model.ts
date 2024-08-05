@@ -117,7 +117,7 @@ export const AVAILABLE_COMPONENTS: Components[] = [
   },
   {
     id: ComponentsType.ResponsiveToolbar,
-    title: 'Responsive',
+    title: 'Responsive toolbar',
     description: 'An automatic way to handle icons that are not appearing in the viewport using Intersection Observer.',
     image: '16.jpg',
   }
