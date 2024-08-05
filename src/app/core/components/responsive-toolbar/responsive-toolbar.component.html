@@ -1,0 +1,25 @@
+<section class="flex flex-col items-center gap-8 p-4 m-auto">
+  <span class="text-center">Manually resize your page to see the actions.</span>
+
+  <div class="w-full flex flex-col gap-2">
+    <span>Icons inside the toolbar</span>
+
+    <div class="flex p-2 border border-[--color-border] truncate" #toolbar>
+      @for (icon of iconsList; track $index) {
+        <span class="cursor-default" [innerHTML]="icon" #icon></span>
+      }
+    </div>
+  </div>
+  
+  @if (notVisibleIcons.length) {
+    <div class="w-full flex flex-col gap-2">
+      <span>Icons that didn't fit in the toolbar</span>
+
+      <div class="flex flex-wrap p-2 border border-[--color-border]">
+        @for (icon of notVisibleIcons; track $index) {
+          <span class="cursor-default" [innerHTML]="icon.innerHTML"></span>
+        }
+      </div>
+    </div>
+  }
+</section>

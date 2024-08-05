@@ -14,6 +14,7 @@ import { RatingFormComponent } from "../../components/rating-form/rating-form.co
 import { ReactiveFormComponent } from "../../components/reactive-form/reactive-form.component";
 import { RealtimeDataTableComponent } from "../../components/realtime-data-table/realtime-data-table.component";
 import { ResizableElementComponent } from "../../components/resizable-element/resizable-element.component";
+import { ResponsiveToolbarComponent } from '../../components/responsive-toolbar/responsive-toolbar.component';
 import { ToasterExampleComponent } from "../../components/toaster-example/toaster-example.component";
 import { VirtualScrollComponent } from "../../components/virtual-scroll/virtual-scroll.component";
 import { Components, ComponentsType } from '../../models/components.model';
@@ -23,13 +24,17 @@ import { ComponentsService } from '../../services/components.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CardComponent, FilterComponentsPipe, GalleryAnimationsComponent, ProgressBarComponent, OnlineCheckerComponent, DelayedInputComponent, ResizableElementComponent, InfiniteScrollComponent, VirtualScrollComponent, RatingFormComponent, HttpRequestExampleComponent, ToasterExampleComponent, ModalExampleComponent, RealtimeDataTableComponent, ReactiveFormComponent, ChartComponent, ContextMenuContainerComponent],
+  imports: [CommonModule, CardComponent, FilterComponentsPipe, GalleryAnimationsComponent, ProgressBarComponent, OnlineCheckerComponent, DelayedInputComponent, ResizableElementComponent, InfiniteScrollComponent, VirtualScrollComponent, RatingFormComponent, HttpRequestExampleComponent, ToasterExampleComponent, ModalExampleComponent, RealtimeDataTableComponent, ReactiveFormComponent, ResponsiveToolbarComponent, ChartComponent, ContextMenuContainerComponent],
   templateUrl: 'home.page.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePage {
   protected get ComponentTypes(): typeof ComponentsType {
     return ComponentsType;
+  }
+
+  protected get currentComponentId(): ComponentsType | undefined {
+    return this.componentsService.currentComponent()?.id;
   }
 
   public constructor(protected componentsService: ComponentsService) {}

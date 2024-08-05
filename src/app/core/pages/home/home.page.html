@@ -1,64 +1,68 @@
 @if (componentsService.currentComponent()) {
   <div class="flex flex-col w-full">
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.GalleryAnimations) {
+    @defer (when currentComponentId == ComponentTypes.GalleryAnimations) {
       <app-gallery-animations />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ProgressBar) {
+    @defer (when currentComponentId == ComponentTypes.ProgressBar) {
       <app-progress-bar />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.OnlineChecker) {
+    @defer (when currentComponentId == ComponentTypes.OnlineChecker) {
       <app-online-checker />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.DelayedInput) {
+    @defer (when currentComponentId == ComponentTypes.DelayedInput) {
       <app-delayed-input />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ResizableElement) {
+    @defer (when currentComponentId == ComponentTypes.ResizableElement) {
       <app-resizable-element />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.InfiniteScroll) {
+    @defer (when currentComponentId == ComponentTypes.InfiniteScroll) {
       <app-infinite-scroll />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.VirtualScroll) {
+    @defer (when currentComponentId == ComponentTypes.VirtualScroll) {
       <app-virtual-scroll />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.RatingForm) {
+    @defer (when currentComponentId == ComponentTypes.RatingForm) {
       <app-rating-form />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.HttpRequest) {
+    @defer (when currentComponentId == ComponentTypes.HttpRequest) {
       <app-http-request-example />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.Toaster) {
+    @defer (when currentComponentId == ComponentTypes.Toaster) {
       <app-toaster-example />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.Modal) {
+    @defer (when currentComponentId == ComponentTypes.Modal) {
       <app-modal-example />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.RealtimeDataTable) {
+    @defer (when currentComponentId == ComponentTypes.RealtimeDataTable) {
       <app-realtime-data-table />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ReactiveForm) {
+    @defer (when currentComponentId == ComponentTypes.ReactiveForm) {
       <app-reactive-form />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.Chart) {
+    @defer (when currentComponentId == ComponentTypes.Chart) {
       <app-chart />
     }
 
-    @defer (when componentsService.currentComponent()?.id == ComponentTypes.ContextMenu) {
+    @defer (when currentComponentId == ComponentTypes.ContextMenu) {
       <app-context-menu-container />
+    }
+
+    @defer (when currentComponentId == ComponentTypes.ResponsiveToolbar) {
+      <app-responsive-toolbar />
     }
 
     <ng-container [ngTemplateOutlet]="backButtonTpl"></ng-container>

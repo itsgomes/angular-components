@@ -20,7 +20,8 @@ export enum ComponentsType {
   RealtimeDataTable,
   ReactiveForm,
   Chart,
-  ContextMenu
+  ContextMenu,
+  ResponsiveToolbar
 }
 
 export const AVAILABLE_COMPONENTS: Components[] = [
@@ -113,5 +114,11 @@ export const AVAILABLE_COMPONENTS: Components[] = [
     title: 'Custom context menu',
     description: 'Steps to create your own custom and reusable context menu directive.',
     image: '15.jpg',
+  },
+  {
+    id: ComponentsType.ResponsiveToolbar,
+    title: 'Responsive',
+    description: 'An automatic way to handle icons that are not appearing in the viewport using Intersection Observer.',
+    image: '16.jpg',
   }
 ];
