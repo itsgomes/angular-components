@@ -16,7 +16,7 @@ import { ToasterComponent } from './shared/components/toaster/toaster.component'
     ToasterComponent
   ],
   template: `
-    <main class="container h-screen mx-auto">
+    <main class="container h-screen flex flex-col mx-auto">
       <app-header />
       <router-outlet />
       <app-footer />

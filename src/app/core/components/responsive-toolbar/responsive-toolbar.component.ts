@@ -1,5 +1,5 @@
 import { CommonModule, DOCUMENT } from "@angular/common";
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, inject, OnDestroy, OnInit, Signal, viewChild, viewChildren } from "@angular/core";
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, OnDestroy, OnInit, Signal, viewChild, viewChildren } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { ICONS_LIST, IconsConfig } from "./responsive-toolbar.model";
 
@@ -16,12 +16,15 @@ import { ICONS_LIST, IconsConfig } from "./responsive-toolbar.model";
 export class ResponsiveToolbarComponent implements OnInit, AfterViewInit, OnDestroy {
   private _observer!: IntersectionObserver;
   private _iconsMap: Map<string, IconsConfig> = new Map();
-  private _document: Document = inject(DOCUMENT);
-  private _cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
 
   protected icons: Signal<ReadonlyArray<ElementRef>> = viewChildren<ElementRef>('icon');
   protected iconsList: ReadonlyArray<string> = ICONS_LIST;
   protected toolbar: Signal<ElementRef> = viewChild.required<ElementRef>('toolbar');
+
+  public constructor(
+    private _cdr: ChangeDetectorRef,
+    @Inject(DOCUMENT) private _document: Document
+  ) {}
 
   public ngOnInit(): void {
     this._observer = new IntersectionObserver(
@@ -52,6 +55,9 @@ export class ResponsiveToolbarComponent implements OnInit, AfterViewInit, OnDest
   }
 
   protected get notVisibleIcons(): Element[] {
-    return Array.from(this._iconsMap.values()).filter(i => !i.isVisible).map(i => i.element);
+    return Array
+      .from(this._iconsMap.values())
+      .filter(i => !i.isVisible)
+      .map(i => i.element);
   }
 }

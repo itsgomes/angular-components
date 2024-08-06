@@ -1,8 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, HostBinding } from "@angular/core";
-import { takeUntilDestroyed, toObservable } from "@angular/core/rxjs-interop";
-import { Components } from "../../../core/models/components.model";
-import { ComponentsService } from "../../../core/services/components.service";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { ThemeService } from "../../services/themes.service";
 import { SOCIAL_MEDIAS, SocialMedia, SocialMediaTypes } from "./footer.model";
 
@@ -11,24 +8,13 @@ import { SOCIAL_MEDIAS, SocialMedia, SocialMediaTypes } from "./footer.model";
   standalone: true,
   imports: [CommonModule],
   templateUrl: 'footer.component.html',
-  host: { 'class' : 'container' },
+  host: { 'class' : 'container mt-auto' },
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {
   protected readonly socialMedias: SocialMedia[] = SOCIAL_MEDIAS;
 
-  public constructor(
-    protected themeService: ThemeService,
-    private _componentsService: ComponentsService
-  ) {
-    toObservable(this._componentsService.currentComponent)
-      .pipe(
-        takeUntilDestroyed())
-      .subscribe((currentComponent: Components | null) => {
-          this.fixed = Boolean(currentComponent);
-          this.bottom = Boolean(currentComponent);
-      });
-  }
+  public constructor(protected themeService: ThemeService) {}
 
   protected openSocialMedia(media: SocialMedia): void {
     switch (media.type) {
@@ -42,7 +28,4 @@ export class FooterComponent {
         break;
     }
   }
-
-  @HostBinding('class.fixed') protected fixed: boolean = false;
-  @HostBinding('class.bottom-0') protected bottom: boolean = false;
 }
